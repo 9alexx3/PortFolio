@@ -6,10 +6,9 @@
 
 :root{
     --wallpaper-color: radial-gradient(circle,rgba(4,189,228,.1) -25%, rgba(2,83,185,.5));
-    --taskbar-height: 2.5rem;
+    --taskbar-height: 4.5vh;
     --taskbar-color: rgb(243, 243, 243, .85);
-    --taskbar-color-dark: red;
-    
+    --taskbar-color-dark: red;    
 }
 
 /* #myVideo {
@@ -27,24 +26,20 @@
 
 body {
     background: var(--wallpaper-color);
-    height: 100vh;
-    width: 100vw;
     font-size: 1.5em;
 }
 
 .dark-theme {
     background: var(--wallpaper-color-dark);
-
 }
 
-
 .contenedor {
-    width: 100%; /* Puedes ajustar este valor según tus necesidades */
+    width: 100%;
     height: calc(100vh - var(--taskbar-height));
     display: flex;
-    margin: 0; /* Centra el contenedor en la página */
-    background-image: url("../images/w11.webp");
-    background-position: center center;
+    margin: 0;
+    background-image: url("../images/W11.webp");
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
 }
