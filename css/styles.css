@@ -6,52 +6,77 @@
 
 :root{
     --wallpaper-color: radial-gradient(circle,rgba(4,189,228,.1) -25%, rgba(2,83,185,.5));
-    --taskbar-height: 2.5rem;
+    --wallpaper-color-dark: #333; 
+    --taskbar-height: 5vh;
     --taskbar-color: rgb(243, 243, 243, .85);
     --taskbar-color-dark: red;
     
 }
 
-/* #myVideo {
-    width: 90%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    right: -50%;
-    transform: translateX(-60%);
-    bottom: -100px;
-    min-width: 90%;
-    min-height: 100%;
-} */
 
-body {
-    background: var(--wallpaper-color);
-    height: 100vh;
-    width: 100vw;
-    font-size: 1.5em;
+.desktop-background {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    margin: 0;
+    background: url("../../images/W11.webp") center bottom / contain no-repeat;
+    background-color: var(--wallpaper-color);
 }
 
 .dark-theme {
-    background: var(--wallpaper-color-dark);
-
+    background-color: var(--wallpaper-color-dark);
 }
 
 
-.contenedor {
-    width: 100%; /* Puedes ajustar este valor según tus necesidades */
-    height: calc(100vh - var(--taskbar-height));
-    display: flex;
-    margin: 0; /* Centra el contenedor en la página */
-    background-image: url("../images/w11.webp");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.desktop-icons-container {
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.footer {
+.icons {
+    padding: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, 5.5rem);
+    grid-template-rows: repeat(auto-fit, 5.5rem);
+    list-style: none;
+    height: 100%;
+    gap: 2rem;
+}
+
+.icon {
+background-color: red;
+text-align: center;
+padding: 0.5rem;
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.icon img {
+width: 60%; /* Ajusta el tamaño de la imagen según tus necesidades */
+border-radius: 50%;
+}
+
+.icon span {
+margin-top: 0.5rem;
+color: white; /* Ajusta el color del texto según tus necesidades */
+white-space: nowrap;
+}
+
+/* * FOOTER */
+
+.taskbar {
     width: 100%;
     height: var(--taskbar-height);
     background-color: var(--taskbar-color);
     display: flex;
+}
+
+.dark-theme .taskbar {
+    background-color: var(--taskbar-color-dark);
 }
