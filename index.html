@@ -4,44 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
 </head>
+
 <body class="dark-theme">
     <main class="desktop-background">
         <div class="desktop-icons-container">
             <ul class="icons">
-                <li class="icon">
+                <li class="icon" id="Recycle_Bin">
                     <img src="./images/icons/windows11/bin.png" alt="Recycle Bin">
                     <span>Recycle Bin</span>
                 </li>
 
-                <li class="icon">
-                    <img src="./images/icons/windows11/cv.svg" alt="Settings">
+                <li class="icon" id="Google_Chrome">
+                    <img src="./images/icons/essencials/chrome.svg" alt="Settings">
                     <span>Google Chrome</span>
                 </li>
 
-                <li class="icon">
-                    <img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer">
-                    <span>File Explorer</span>
+                <li class="icon" id="Download_CV">
+                    <img src="./images/icons/windows11/icon.png" alt="File Explorer">
+                    <a href="./Práctica 2.3.- Análisis del registro con Regripper--AlejandroC.pdf" download="Mi PDF">Download CV</a>
                 </li>
 
-                <li class="icon">
-                    <img src="./images/icons/essencials/linkedin.svg" alt="Settings">
+                <li class="icon" id="LinkedIn" onclick="window.open('https://www.linkedin.com/in/alejandro-castell-alberola-a3b25b258/')">
+                    <img src="./images/icons/essencials/linkedin.svg" alt="LinkedIn">
                     <span>LinkedIn</span>
                 </li>
 
-                <li class="icon">
-                    <img src="./images/icons/essencials/github.svg" alt="Settings">
+                <li class="icon" id="GitHub" onclick="window.open('https://github.com/9alexx3')">
+                    <img src="./images/icons/essencials/github.svg" alt="GitHub">
                     <span>GitHub</span>
                 </li>
 
-                <li class="icon">
-                    <img src="./images/icons/essencials/github.svg" alt="Settings">
+                <li class="icon" id="Projects">
+                    <img src="./images/icons/windows11/projects.svg" alt="Projects">
                     <span>Projects</span>
                 </li>
 
+                <li class="icon" id="Certifications">
+                    <img src="./images/icons/windows11/certs.svg" alt="Certs">
+                    <span>Certifications</span>
+                </li>
 
+                <li class="icon" id="Screen_Recorder">
+                    <img src="./images/icons/windows11/camera.svg" alt="Camera">
+                    <span>Screen Recorder</span>
+                </li>
             </ul>
         </div>
     </main>
@@ -49,5 +59,7 @@
     <footer class="taskbar">
 
     </footer>
+
+    <script src="./js/screen-recorder.js"></script>
 </body>
 </html>
