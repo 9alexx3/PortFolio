@@ -10,9 +10,10 @@
 </head>
 
 <body class="dark-theme">
+
     <main class="desktop-background">
         <div class="desktop-icons-container">
-            <ul class="icons">
+            <ul class="icons" id="milista">
                 <li class="icon" id="Recycle_Bin">
                     <img src="./images/icons/windows11/bin.png" alt="Recycle Bin">
                     <span>Recycle Bin</span>
@@ -24,11 +25,11 @@
                 </li>
 
                 <li class="icon" id="Download_CV">
-                    <img src="./images/icons/windows11/icon.png" alt="File Explorer">
+                    <img src="./images/icons/windows11/cv.png" alt="CV">
                     <a href="./Práctica 2.3.- Análisis del registro con Regripper--AlejandroC.pdf" download="Mi PDF">Download CV</a>
                 </li>
 
-                <li class="icon" id="LinkedIn" onclick="window.open('https://www.linkedin.com/in/alejandro-castell-alberola-a3b25b258/')">
+                <li class="icon" id="LinkedIn" onclick="click_icon()">
                     <img src="./images/icons/essencials/linkedin.svg" alt="LinkedIn">
                     <span>LinkedIn</span>
                 </li>
@@ -52,14 +53,28 @@
                     <img src="./images/icons/windows11/camera.svg" alt="Camera">
                     <span>Screen Recorder</span>
                 </li>
+
+                <li class="icon" id="PowerShell">
+                    <img src="./images/icons/windows11/powershell.svg" alt="PowerShell">
+                    <span>PowerShell</span>
+                </li>
             </ul>
         </div>
     </main>
 
     <footer class="taskbar">
-
+        <!-- <iframe sandbox="allow-forms allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" src="https://www.google.com/webhp?igu=1" frameborder="0"></iframe> -->
+        <img src="./images/icons/windows11/windows-logo.svg" alt="Windows Logo">
+        <img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer">
+        <img src="./images/icons/windows11/bell-taskbar.svg" alt="Bell">
+        
     </footer>
 
-    <script src="./js/screen-recorder.js"></script>
+
+    <div class="night-light"></div>
+    <div class="selector" id="selector"></div>
+
+    <script src="./js/events/click/screen-recorder.js"></script>
+    <script src="./js/DragSelector.js"></script>
 </body>
 </html>

@@ -5,11 +5,11 @@
 }
 
 :root {
-    --wallpaper-color: radial-gradient(circle, rgba(4, 189, 228, .1) -25%, rgba(2, 83, 185, .5));
-    --wallpaper-color-dark: #333;
+    --wallpaper-color: linear-gradient(to right, #87aecb, #8db3ce, #94b8d2, #9abdd5, #a1c2d9, #a1c2d9, #a1c2d9, #a1c2d9, #9abdd5, #94b8d2, #8db3ce, #87aecb);
+    --wallpaper-color-dark: linear-gradient(to right, #010a19, #061121, #081629, #091a32, #0a1e3b, #0a1e3b, #0a1e3b, #0a1e3b, #091a32, #081629, #061121, #010a19);
     --taskbar-height: 5vh;
     --taskbar-color: rgb(243, 243, 243, .85);
-    --taskbar-color-dark: red;
+    --taskbar-color-dark: #1c1c1c;
 }
 
 .desktop-background {
@@ -22,7 +22,7 @@
 }
 
 .dark-theme {
-    background-color: var(--wallpaper-color-dark);
+    background-image: var(--wallpaper-color-dark);
 }
 
 .desktop-icons-container {
@@ -46,7 +46,6 @@
 }
 
 .icon {
-    background-color: red;
     text-align: center;
     padding: .15rem;
     display: flex;
@@ -54,6 +53,14 @@
     align-items: center;
     overflow: visible;
     max-width: 100%;
+    cursor: pointer;
+    
+}
+
+.icon:hover{
+    background-color: #242e3b;
+    /* #252f3c */
+    
 }
 
 .icon img {
@@ -79,3 +86,22 @@ span, a {
 .dark-theme .taskbar {
     background-color: var(--taskbar-color-dark);
 }
+
+.night-light{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(244 164 96 / 25%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Posiciona el div sobre el contenido de la página */
+}
+
+.selector {
+    position: absolute;
+    border: 1px solid #0078d7;
+    background-color: rgb(217 235 249 / 10%);
+    pointer-events: none;
+    display: none;
+  }
