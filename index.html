@@ -11,7 +11,8 @@
 
 <body class="dark-theme">
 
-    <main class="desktop-background">
+    <main class="desktop-background" id="desktop">
+        <div class="desktop-settings"></div>
         <div class="desktop-icons-container">
             <ul class="icons" id="milista">
                 <li class="icon" id="Recycle_Bin">
@@ -25,7 +26,7 @@
                 </li>
 
                 <li class="icon" id="Download_CV">
-                    <img src="./images/icons/windows11/cv.png" alt="CV">
+                    <img src="./images/icons/essencials/cv.png" alt="CV">
                     <a href="./Práctica 2.3.- Análisis del registro con Regripper--AlejandroC.pdf" download="Mi PDF">Download CV</a>
                 </li>
 
@@ -35,7 +36,7 @@
                 </li>
 
                 <li class="icon" id="GitHub" onclick="window.open('https://github.com/9alexx3')">
-                    <img src="./images/icons/essencials/github.svg" alt="GitHub">
+                    <img src="./images/icons/essencials/github2.svg" alt="GitHub">
                     <span>GitHub</span>
                 </li>
 
@@ -45,7 +46,7 @@
                 </li>
 
                 <li class="icon" id="Certifications">
-                    <img src="./images/icons/windows11/certs.svg" alt="Certs">
+                    <img src="./images/icons/essencials/certs.svg" alt="Certs">
                     <span>Certifications</span>
                 </li>
 
@@ -58,23 +59,172 @@
                     <img src="./images/icons/windows11/powershell.svg" alt="PowerShell">
                     <span>PowerShell</span>
                 </li>
+
+                <li class="icon" id="HackTheBox">
+                  <img src="./images/icons/essencials/htb.svg" alt="HackTheBox">
+                  <span>HackTheBox</span>
+              </li>
             </ul>
         </div>
     </main>
 
-    <footer class="taskbar">
-        <!-- <iframe sandbox="allow-forms allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" src="https://www.google.com/webhp?igu=1" frameborder="0"></iframe> -->
-        <img src="./images/icons/windows11/windows-logo.svg" alt="Windows Logo">
-        <img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer">
-        <img src="./images/icons/windows11/bell-taskbar.svg" alt="Bell">
+	<footer class="taskbar" id="footer">
+		<div class="weather-info">
+		  <img src="./images/icons/weather/rain.svg" alt="Soleado" class="weather-icon">
+		  <div class="weather-details">
+			<span class="temperature">23ºC</span>
+			<span class="description">Soleado</span>
+		  </div>
+		</div>
+	  
+		<div class="icon-list-container">
+			<div class="icon-list">
+        		<img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer">
+        		<img src="./images/icons/windows11/windows-logo.svg" alt="Windows Logo">
+				 <img src="./images/icons/windows11/settings.svg" alt="Settings">
+			</div>
+		</div>
+
+		<div class="widgets">
+			<div class="icon-list">
+				<img src="./images/icons/windows11/arrow-up.svg" alt="Arrow-up">
+				<img src="./images/icons/windows11/defender.svg" alt="defender">
+				<img src="./images/icons/windows11/volume-high-solid.svg" alt="Volume">
+				<img src="./images/icons/windows11/battery.svg" alt="Battery">
+				<div class="weather-details">
+					<span class="temperature">5:11 pm</span>
+					<span class="description">13/02/2024</span>
+				</div>
+				<img src="./images/icons/windows11/bell-taskbar.svg" alt="Bell">
+			</div>
+		</div>
+	  </footer>
+	  
+<style>
+	.taskbar {
+  width: 100%;
+  height: var(--taskbar-height);
+  background-color: var(--taskbar-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.dark-theme .taskbar {
+  background-color: var(--taskbar-color-dark);
+}
+
+.night-light {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(244 164 96 / 25%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Posiciona el div sobre el contenido de la página */
+}
+
+.luminosity {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 1, 1, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Posiciona el div sobre el contenido de la página */
+}
+
+.selector {
+  position: absolute;
+  border: 1px solid #0078d7;
+  background-color: rgb(217 235 249 / 10%);
+  pointer-events: none;
+  display: none;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  padding: 0rem 1.5rem;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+}
+
+.weather-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 7.75%;
+}
+
+.temperature {
+  font-size: 1.04rem;
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  color: #333;
+}
+
+.description {
+  font-size: .9rem;
+  display: block;
+  margin: 0;
+  color: #777;
+}
+
+.weather-info > img {
+  width: 75%;
+  height: 75%;
+}
+
+.widgets {
+  display: flex;
+  align-items: center;
+  padding: 0rem 1.5rem;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.icon-list img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+}
+
+</style>
+        <!-- <img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer"> -->
+        <!-- <img src="./images/icons/windows11/windows-logo.svg" alt="Windows Logo"> -->
+        <!-- <img src="./images/icons/windows11/settings.svg" alt="Settings"> -->
+
         
-    </footer>
+        <!-- <img src="./images/icons/windows11/arrow-up.svg" alt="Arrow-up"> -->
+        <!-- <img src="./images/icons/windows11/defender.svg" alt="defender"> -->
+        <!-- <img src="./images/icons/windows11/volume-high-solid.svg" alt="Volume"> -->
+        <!-- <img src="./images/icons/windows11/battery.svg" alt="Battery"> -->
+        
+    
 
 
     <div class="night-light"></div>
     <div class="selector" id="selector"></div>
+    <div class="luminosity" id="luminosity"></div>
 
     <script src="./js/events/click/screen-recorder.js"></script>
     <script src="./js/DragSelector.js"></script>
+    <!-- <script src="./js/right-click.js"></script> -->
 </body>
 </html>
