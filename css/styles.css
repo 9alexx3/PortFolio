@@ -23,6 +23,7 @@
 
 .dark-theme {
     background-image: var(--wallpaper-color-dark);
+    color: #fefefe;
 }
 
 .desktop-icons-container {
@@ -79,13 +80,18 @@ span, a {
     height: var(--taskbar-height);
     background-color: var(--taskbar-color);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-
+  
 .dark-theme .taskbar {
     background-color: var(--taskbar-color-dark);
 }
-
-.night-light{
+  
+.night-light {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -95,8 +101,8 @@ span, a {
     left: 0;
     z-index: 10; /* Posiciona el div sobre el contenido de la página */
 }
-
-.luminosity{
+  
+.luminosity {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -106,7 +112,7 @@ span, a {
     left: 0;
     z-index: 10; /* Posiciona el div sobre el contenido de la página */
 }
-
+  
 .selector {
     position: absolute;
     border: 1px solid #0078d7;
@@ -114,16 +120,14 @@ span, a {
     pointer-events: none;
     display: none;
 }
-
+  
 .weather-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0rem 1.5rem;
-    border-radius: 4px;
     height: 100%;
 }
-
+  
 .weather-details {
     height: 100%;
     display: flex;
@@ -133,22 +137,66 @@ span, a {
     align-items: center;
     padding-left: 7.75%;
 }
-
+  
 .temperature {
     font-size: 1.04rem;
     font-weight: bold;
     display: block;
     margin: 0;
 }
-
+  
 .description {
     font-size: .9rem;
     display: block;
     margin: 0;
-    color: #c0bcbc;
+    color: #A0A0A0;
 }
-
+  
 .weather-info > img {
     width: 75%;
     height: 75%;
+}
+  
+.system-tray-icons {
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    height: 100%;
+}
+  
+.icon-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+  
+.taskbar-items {
+      display: flex;
+      align-items: center;
+      padding: 0rem 1.5rem;
+      height: 100%;
+}
+  
+.taskbar-items > .icon-list > img {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 8px;
+}
+  
+.system-tray-icons---icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 8px;
+}
+  
+.color-svg {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(0deg);
+}
+  
+.widgets > .icon-list > img {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 8px;
 }

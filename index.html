@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     
 </head>
@@ -77,148 +77,31 @@
 		  </div>
 		</div>
 	  
-		<div class="icon-list-container">
+		<div class="taskbar-items">
 			<div class="icon-list">
         		<img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer">
         		<img src="./images/icons/windows11/windows-logo.svg" alt="Windows Logo">
-				 <img src="./images/icons/windows11/settings.svg" alt="Settings">
+				<img src="./images/icons/windows11/settings.svg" alt="Settings">
 			</div>
 		</div>
-
-		<div class="widgets">
+        
+		<div class="system-tray-icons"> 
 			<div class="icon-list">
-				<img src="./images/icons/windows11/arrow-up.svg" alt="Arrow-up">
-				<img src="./images/icons/windows11/defender.svg" alt="defender">
-				<img src="./images/icons/windows11/volume-high-solid.svg" alt="Volume">
-				<img src="./images/icons/windows11/battery.svg" alt="Battery">
+				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/arrow-up.svg" alt="Arrow-up">
+				<img class="system-tray-icons---icon" src="./images/icons/windows11/defender.svg" alt="defender">
+				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/volume-high-solid.svg" alt="Volume">
+				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/battery.svg" alt="Battery">
 				<div class="weather-details">
 					<span class="temperature">5:11 pm</span>
 					<span class="description">13/02/2024</span>
 				</div>
-				<img src="./images/icons/windows11/bell-taskbar.svg" alt="Bell">
+				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/bell-taskbar.svg" alt="Bell">
 			</div>
 		</div>
 	  </footer>
 	  
-<style>
-	.taskbar {
-  width: 100%;
-  height: var(--taskbar-height);
-  background-color: var(--taskbar-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
 
-.dark-theme .taskbar {
-  background-color: var(--taskbar-color-dark);
-}
-
-.night-light {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(244 164 96 / 25%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10; /* Posiciona el div sobre el contenido de la página */
-}
-
-.luminosity {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(10, 1, 1, 0.25);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10; /* Posiciona el div sobre el contenido de la página */
-}
-
-.selector {
-  position: absolute;
-  border: 1px solid #0078d7;
-  background-color: rgb(217 235 249 / 10%);
-  pointer-events: none;
-  display: none;
-}
-
-.weather-info {
-  display: flex;
-  align-items: center;
-  padding: 0rem 1.5rem;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #f7f7f7;
-}
-
-.weather-details {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  padding-left: 7.75%;
-}
-
-.temperature {
-  font-size: 1.04rem;
-  font-weight: bold;
-  display: block;
-  margin: 0;
-  color: #333;
-}
-
-.description {
-  font-size: .9rem;
-  display: block;
-  margin: 0;
-  color: #777;
-}
-
-.weather-info > img {
-  width: 75%;
-  height: 75%;
-}
-
-.widgets {
-  display: flex;
-  align-items: center;
-  padding: 0rem 1.5rem;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #f7f7f7;
-}
-
-.icon-list {
-  display: flex;
-}
-
-.icon-list img {
-  width: 24px;
-  height: 24px;
-  margin: 0 8px;
-}
-
-</style>
-        <!-- <img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer"> -->
-        <!-- <img src="./images/icons/windows11/windows-logo.svg" alt="Windows Logo"> -->
-        <!-- <img src="./images/icons/windows11/settings.svg" alt="Settings"> -->
-
-        
-        <!-- <img src="./images/icons/windows11/arrow-up.svg" alt="Arrow-up"> -->
-        <!-- <img src="./images/icons/windows11/defender.svg" alt="defender"> -->
-        <!-- <img src="./images/icons/windows11/volume-high-solid.svg" alt="Volume"> -->
-        <!-- <img src="./images/icons/windows11/battery.svg" alt="Battery"> -->
-        
-    
-
-
+    <!-- * OTROS DIVS -->
     <div class="night-light"></div>
     <div class="selector" id="selector"></div>
     <div class="luminosity" id="luminosity"></div>
