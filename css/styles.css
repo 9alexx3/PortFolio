@@ -5,11 +5,18 @@
 }
 
 :root {
-    --wallpaper-color: linear-gradient(to right, #87aecb, #8db3ce, #94b8d2, #9abdd5, #a1c2d9, #a1c2d9, #a1c2d9, #a1c2d9, #9abdd5, #94b8d2, #8db3ce, #87aecb);
-    --wallpaper-color-dark: linear-gradient(to right, #010a19, #061121, #081629, #091a32, #0a1e3b, #0a1e3b, #0a1e3b, #0a1e3b, #091a32, #081629, #061121, #010a19);
-    --taskbar-height: 5vh;
+    --wallpaper-color: linear-gradient(to right, #8fb4cf, #a4c4db,#7eabc8);
     --taskbar-color: rgb(243, 243, 243, .85);
-    --taskbar-color-dark: #1c1c1c;
+    --taskbar-height: 5vh;
+    --text-color: #0e0e0e;
+    --color-svg: #0000;
+}
+
+.dark-theme {
+    --color-svg: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(0deg);
+    --text-color: #fefefe;
+    --taskbar-color: #1c1c1c;
+    --wallpaper-color: linear-gradient(to right, #010a19, #061121, #081629, #091a32, #0a1e3b, #0a1e3b, #0a1e3b, #0a1e3b, #091a32, #081629, #061121, #010a19);
 }
 
 .desktop-background {
@@ -17,13 +24,14 @@
     height: 95vh;
     display: flex;
     margin: 0;
-    background: url("../../images/W11.webp") center bottom / contain no-repeat;
+    background: url("../images/windows/wallpapers/W11.webp") center bottom / contain no-repeat;
     background-color: var(--wallpaper-color);
+    color: var(--text-color);
 }
 
 .dark-theme {
-    background-image: var(--wallpaper-color-dark);
-    color: #fefefe;
+    background-image: var(--wallpaper-color);
+    color: var(--taskbar-color);
 }
 
 .desktop-icons-container {
@@ -68,7 +76,7 @@
 
 span, a {
     margin-top: 0.25rem;
-    color: white;
+    color: var(--text-color);
     white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -88,7 +96,7 @@ span, a {
 }
   
 .dark-theme .taskbar {
-    background-color: var(--taskbar-color-dark);
+    background-color: var(--taskbar-color);
 }
   
 .night-light {
@@ -127,8 +135,8 @@ span, a {
     padding: 0rem 1.5rem;
     height: 100%;
 }
-  
-.weather-details {
+
+.taskbar-objects {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -173,10 +181,10 @@ span, a {
 }
   
 .taskbar-items {
-      display: flex;
-      align-items: center;
-      padding: 0rem 1.5rem;
-      height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    height: 100%;
 }
   
 .taskbar-items > .icon-list > img {
@@ -192,11 +200,37 @@ span, a {
 }
   
 .color-svg {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(0deg);
+    filter: var(--color-svg)
 }
   
 .widgets > .icon-list > img {
     width: 1.2rem;
     height: 1.2rem;
     margin: 0 8px;
+}
+
+.date {
+    font-size: .9rem;
+    display: block;
+    font-weight: 520;
+    margin: 0; 
+    cursor: default;
+    position: relative;
+}
+
+
+.icon-list .taskbar-objects::after {
+    content: attr(data-full-date); /* Utilizamos el atributo data para almacenar la fecha larga */
+    display: none;
+    position: absolute;
+    bottom: 3rem;
+    background-color: var(--wallpaper-color);
+    color: var(--taskbar-color);
+    padding: 5px;
+    text-wrap: nowrap;
+    right: 10px;
+}
+
+.icon-list .taskbar-objects:hover::after {
+    display: block;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>W11 PortFolio Alejandro</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     
@@ -16,52 +16,52 @@
         <div class="desktop-icons-container">
             <ul class="icons" id="milista">
                 <li class="icon" id="Recycle_Bin">
-                    <img src="./images/icons/windows11/bin.png" alt="Recycle Bin">
+                    <img src="./images/windows/icons/bin.png" alt="Recycle Bin">
                     <span>Recycle Bin</span>
                 </li>
 
                 <li class="icon" id="Google_Chrome">
-                    <img src="./images/icons/essencials/chrome.svg" alt="Settings">
+                    <img src="./images/essencials/chrome.svg" alt="Settings">
                     <span>Google Chrome</span>
                 </li>
 
                 <li class="icon" id="Download_CV">
-                    <img src="./images/icons/essencials/cv.png" alt="CV">
+                    <img src="./images/essencials/cv.png" alt="CV">
                     <a href="./Práctica 2.3.- Análisis del registro con Regripper--AlejandroC.pdf" download="Mi PDF">Download CV</a>
                 </li>
 
                 <li class="icon" id="LinkedIn" onclick="click_icon()">
-                    <img src="./images/icons/essencials/linkedin.svg" alt="LinkedIn">
+                    <img src="./images/essencials/linkedin.svg" alt="LinkedIn">
                     <span>LinkedIn</span>
                 </li>
 
                 <li class="icon" id="GitHub" onclick="window.open('https://github.com/9alexx3')">
-                    <img src="./images/icons/essencials/github2.svg" alt="GitHub">
+                    <img src="./images/essencials/github2.svg" alt="GitHub">
                     <span>GitHub</span>
                 </li>
 
                 <li class="icon" id="Projects">
-                    <img src="./images/icons/windows11/projects.svg" alt="Projects">
+                    <img src="./images/windows/icons/projects.svg" alt="Projects">
                     <span>Projects</span>
                 </li>
 
                 <li class="icon" id="Certifications">
-                    <img src="./images/icons/essencials/certs.svg" alt="Certs">
+                    <img src="./images/essencials/certs.svg" alt="Certs">
                     <span>Certifications</span>
                 </li>
 
                 <li class="icon" id="Screen_Recorder">
-                    <img src="./images/icons/windows11/camera.svg" alt="Camera">
+                    <img src="./images/windows/icons/camera.svg" alt="Camera">
                     <span>Screen Recorder</span>
                 </li>
 
                 <li class="icon" id="PowerShell">
-                    <img src="./images/icons/windows11/powershell.svg" alt="PowerShell">
+                    <img src="./images/windows/icons/powershell.svg" alt="PowerShell">
                     <span>PowerShell</span>
                 </li>
 
                 <li class="icon" id="HackTheBox">
-                  <img src="./images/icons/essencials/htb.svg" alt="HackTheBox">
+                  <img src="./images/essencials/htb.svg" alt="HackTheBox">
                   <span>HackTheBox</span>
               </li>
             </ul>
@@ -70,8 +70,8 @@
 
 	<footer class="taskbar" id="footer">
 		<div class="weather-info">
-		  <img src="./images/icons/weather/rain.svg" alt="Soleado" class="weather-icon">
-		  <div class="weather-details">
+		  <img src="./images/weather/rain.svg" alt="Soleado" class="weather-icon">
+		  <div class="taskbar-objects">
 			<span class="temperature">23ºC</span>
 			<span class="description">Soleado</span>
 		  </div>
@@ -79,23 +79,23 @@
 	  
 		<div class="taskbar-items">
 			<div class="icon-list">
-        		<img src="./images/icons/windows11/Windows_Explorer.svg" alt="File Explorer">
-        		<img src="./images/icons/windows11/windows-logo.svg" alt="Windows Logo">
-				<img src="./images/icons/windows11/settings.svg" alt="Settings">
+        		<img src="./images/windows/icons/Windows_Explorer.svg" alt="File Explorer">
+        		<img src="./images/windows/icons/windows-logo.svg" alt="Windows Logo">
+				<img src="./images/windows/icons/settings.svg" alt="Settings">
 			</div>
 		</div>
         
 		<div class="system-tray-icons"> 
 			<div class="icon-list">
-				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/arrow-up.svg" alt="Arrow-up">
-				<img class="system-tray-icons---icon" src="./images/icons/windows11/defender.svg" alt="defender">
-				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/volume-high-solid.svg" alt="Volume">
-				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/battery.svg" alt="Battery">
-				<div class="weather-details">
-					<span class="temperature">5:11 pm</span>
-					<span class="description">13/02/2024</span>
+				<img class="system-tray-icons---icon color-svg" src="./images/windows/icons/arrow-up.svg" alt="Arrow-up">
+				<img class="system-tray-icons---icon" src="./images/windows/icons/defender.svg" alt="defender">
+				<img class="system-tray-icons---icon color-svg" src="./images/windows/icons/volume-high-solid.svg" alt="Volume">
+				<img class="system-tray-icons---icon color-svg" src="./images/windows/icons/battery.svg" alt="Battery">
+				<div class="taskbar-objects" id="time"> 
+					<span class="date" id="clock">15:11</span>
+					<span class="date" id="date">13/02/2024</span>
 				</div>
-				<img class="system-tray-icons---icon color-svg" src="./images/icons/windows11/bell-taskbar.svg" alt="Bell">
+				<img class="system-tray-icons---icon color-svg" src="./images/windows/icons/bell-taskbar.svg" alt="Bell">
 			</div>
 		</div>
 	  </footer>
@@ -106,8 +106,11 @@
     <div class="selector" id="selector"></div>
     <div class="luminosity" id="luminosity"></div>
 
+    <!-- * JS -->
     <script src="./js/events/click/screen-recorder.js"></script>
     <script src="./js/DragSelector.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/battery.js"></script>
     <!-- <script src="./js/right-click.js"></script> -->
 </body>
 </html>
