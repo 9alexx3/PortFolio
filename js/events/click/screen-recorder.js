@@ -1,7 +1,8 @@
 const Recorder = () => {
 
     if(!navigator.mediaDevices) {
-        console.error('getMediaUser')
+        console.error('Screen Recorder not supported in your browser.')
+        alert('Screen Recorder not supported in your browser.')
         return
     }
 
@@ -9,8 +10,8 @@ const Recorder = () => {
 
     button.addEventListener('click', async () => {
         const media = await navigator.mediaDevices.getDisplayMedia({
-            video: { frameRate: {ideal: 30 }},
-            audio: true
+            video: { frameRate: {ideal: 50 }},
+            audio: { }
         })
     
         const mediarecorder = new MediaRecorder(media, {
@@ -26,7 +27,7 @@ const Recorder = () => {
         mediarecorder.addEventListener("dataavailable", (e) => {
             const link = document.createElement("a")
             link.href = URL.createObjectURL(e.data)
-            link.download = "Open-with-browser---PortFolio-AlejandroC.webp"
+            link.download = "Open-with-browser---PortFolio-AlejandroC.webm"
             link.click()
         })
     })

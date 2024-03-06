@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOVER ICONS FOOTER CENTER</title>
+    <title>PortFolio A-Castell</title>
     <link rel="preload" href="./fonts/Segoe-UI.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./images/windows/wallpapers/W11.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     
@@ -18,66 +19,102 @@
             <ul class="icons" id="milista">
                 <li class="icon" id="Recycle_Bin">
                     <img src="./images/windows/icons/bin.png" alt="Recycle Bin">
-                    <span>Recycle Bin</span>
+                    <span class="icon--text">Recycle Bin</span>
                 </li>
 
                 <li class="icon" id="Google_Chrome">
                     <img src="./images/essencials/chrome.svg" alt="Settings">
-                    <span>Google Chrome</span>
+                    <span class="icon--text">Google Chrome</span>
                 </li>
 
                 <li class="icon" id="Download_CV">
                     <img src="./images/essencials/cv.png" alt="CV">
-                    <a href="./Práctica 2.3.- Análisis del registro con Regripper--AlejandroC.pdf" download="Mi PDF">Download CV</a>
+                    <a class="icon--text" href="./Práctica 2.3.- Análisis del registro con Regripper--AlejandroC.pdf" download="Mi PDF">Download CV</a>
                 </li>
 
                 <li class="icon" id="LinkedIn" onclick="click_icon()">
                     <img src="./images/essencials/linkedin.svg" alt="LinkedIn">
-                    <span>LinkedIn</span>
+                    <span class="icon--text">LinkedIn</span>
                 </li>
 
                 <li class="icon" id="GitHub" onclick="window.open('https://github.com/9alexx3')">
                     <img src="./images/essencials/github2.svg" alt="GitHub">
-                    <span>GitHub</span>
+                    <span class="icon--text">GitHub</span>
                 </li>
 
                 <li class="icon" id="Projects">
                     <img src="./images/windows/icons/projects.svg" alt="Projects">
-                    <span>Projects</span>
+                    <span class="icon--text">Projects</span>
                 </li>
 
                 <li class="icon" id="Certifications">
                     <img src="./images/essencials/certs.svg" alt="Certs">
-                    <span>Certifications</span>
+                    <span class="icon--text">Certifications</span>
                 </li>
 
                 <li class="icon" id="Screen_Recorder">
                     <img src="./images/windows/icons/camera.svg" alt="Camera">
-                    <span>Screen Recorder</span>
+                    <span class="icon--text">Screen Recorder</span>
                 </li>
 
                 <li class="icon" id="PowerShell">
                     <img src="./images/windows/icons/powershell.svg" alt="PowerShell">
-                    <span>PowerShell</span>
+                    <span class="icon--text">PowerShell</span>
                 </li>
 
                 <li class="icon" id="HackTheBox">
                   <img src="./images/essencials/htb.svg" alt="HackTheBox">
-                  <span>HackTheBox</span>
+                  <span class="icon--text">HackTheBox</span>
               </li>
             </ul>
         </div>
     </main>
 
 	<footer class="taskbar" id="footer">
-		<div class="weather-info">
-		  <img src="./images/windows/weather/sunny.svg" alt="Soleado" class="weather-icon">
+		<div id="weather-main" class="weather-info">
+		  <img id="taskbar-icon" src="./images/windows/weather/sunny.svg" alt="Soleado" class="weather-icon">
 		  <div class="taskbar-objects">
-			<span class="temperature">23ºC</span>
-			<span class="description">Soleado</span>
+			<span id="taskbar-objects--temperature" class="temperature">Error</span>
+			<span id="taskbar-objects--description" class="description" >404</span>
 		  </div>
 		</div>
 	  
+        <div class="weather-card" id="weather-bg">
+            <div class="temperatures-card">
+                <img id="weather_icon" class="img" src="../images/windows/weather/sunny.svg" alt=".">
+                <span id="temperature-card" class="temperature-card">Error</span>
+                <div class="weather-info-card">
+                    <span id="status-weather" class="weather-status">404</span>
+                    <span id="feels_Like" class="sensacion">Not Found</span>
+                </div>
+            </div>
+            
+            <article class="advanced-weather-info">
+                <section class="weather-items">
+                    <h2 class="weather-item" data-description="Wind speed at which the air moves, measured in kilometers per hour (km/h).">Wind</h2>
+                    <span class="weather-text" id="wind">E</span>
+                </section>
+                <section class="weather-items" >
+                    <h2 class="weather-item" data-description="Percentage of water vapor in the air.">Humidity</h2>
+                    <span class="weather-text" id="humidity">R</span>
+                </section>
+                <section class="weather-items">
+                    <h2 class="weather-item" data-description="The pressure measured in millibars of the air indicates the force exerted by the atmosphere.">Pressure</h2>
+                    <span class="weather-text" id="pressure_mb">R</span>
+                </section>
+                <section class="weather-items">
+                    <h2 class="weather-item" data-description="The amount of water that falls on a surface during a specific period of time expressed in milimeters.">Precipitation</h2>
+                    <span class="weather-text" id="precip_mm">O</span>
+                </section>
+                <section class="weather-items">
+                    <h2 class="weather-item" data-description="Degree of cloudiness in the atmosphere represented as a percentage.">Cloudiness</h2>
+                    <span class="weather-text" id="cloudiness">R</span>
+                </section>
+                
+            </article>
+    
+        </div>
+
 		<div class="taskbar-items">
 			<ul class="icon-list">
                 <li class="icon-list--icon">
@@ -108,11 +145,7 @@
 			</div>
 		</div>
 	  </footer>
-	  
 
-      <!-- ! HOVER ICONS FOOTER CENTER -->
-      <!-- * HOVER ICONS FOOTER CENTER -->
-      <!-- ? HOVER ICONS FOOTER CENTER -->
 
     <!-- * OTROS DIVS -->
     <div class="night-light"></div>
@@ -123,7 +156,8 @@
     <script src="./js/events/click/screen-recorder.js"></script>
     <script src="./js/DragSelector.js"></script>
     <script src="./js/clock.js"></script>
-    <script src="./js/battery.js"></script>
+    <!-- <script src="./js/battery.js"></script> -->
+    <!-- <script src="./js/weather.js"></script> -->
     <!-- <script src="./js/right-click.js"></script> -->
 </body>
 </html>
