@@ -8,6 +8,7 @@
     <link rel="preload" href="./images/windows/wallpapers/W11.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/footer.css">
     
 </head>
 
@@ -25,11 +26,12 @@
                 <li class="icon" id="Google_Chrome">
                     <img src="./images/essencials/chrome.svg" alt="Settings">
                     <span class="icon--text">Google Chrome</span>
+                    
                 </li>
 
                 <li class="icon" id="Download_CV">
                     <img src="./images/essencials/cv.png" alt="CV">
-                    <a class="icon--text" href="./Práctica 2.3.- Análisis del registro con Regripper--AlejandroC.pdf" download="Mi PDF">Download CV</a>
+                    <a class="icon--text" href="#" download="Mi PDF">Download CV</a>
                 </li>
 
                 <li class="icon" id="LinkedIn" onclick="click_icon()">
@@ -68,6 +70,11 @@
               </li>
             </ul>
         </div>
+
+        <div>
+            <iframe width="90%" height="70%" src="https://www.google.com/webhp?igu=1" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
     </main>
 
 	<footer class="taskbar" id="footer">
@@ -137,11 +144,16 @@
 				<img class="system-tray-icons---icon" src="./images/windows/icons/defender.svg" alt="defender">
 				<img class="system-tray-icons---icon color-svg" src="./images/windows/icons/volume-high-solid.svg" alt="Volume">
 				<img class="system-tray-icons---icon color-svg" src="./images/windows/icons/battery.svg" alt="Battery">
-				<div class="taskbar-objects" id="time"> 
-					<span class="date" id="clock">15:11</span>
-					<span class="date" id="date">13/02/2024</span>
+                <div class="hover-right">
+                    <div class="taskbar-objects" id="time"> 
+                        <span class="date" id="clock">15:11</span>
+                        <span class="date" id="date">13/02/2024</span>
 				</div>
-				<img class="system-tray-icons---icon color-svg" src="./images/windows/icons/bell-taskbar.svg" alt="Bell">
+                <div class="icon-list" id="bell" data-description="No new notifications">
+                    <img class="system-tray-icons---icon color-svg" src="./images/windows/icons/bell-taskbar.svg" alt="Bell">
+                </div>
+                </div>
+                <div class="empty"></div>
 			</div>
 		</div>
 	  </footer>
@@ -153,7 +165,7 @@
     <div class="luminosity" id="luminosity"></div>
 
     <!-- * JS -->
-    <script src="./js/events/click/screen-recorder.js"></script>
+    <script src="./js/events/click/screen-re        corder.js"></script>
     <script src="./js/DragSelector.js"></script>
     <script src="./js/clock.js"></script>
     <!-- <script src="./js/battery.js"></script> -->

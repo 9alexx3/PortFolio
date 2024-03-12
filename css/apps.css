@@ -1,0 +1,29 @@
+.night-light {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(244 164 96 / 25%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Posiciona el div sobre el contenido de la página */
+}
+  
+.luminosity {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(10, 1, 1, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Posiciona el div sobre el contenido de la página */
+}
+  
+.selector {
+    position: absolute;
+    border: 1px solid #0078d7;
+    background-color: rgb(217 235 249 / 10%);
+    pointer-events: none;
+    display: none;
+}

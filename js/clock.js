@@ -23,7 +23,7 @@ const get_Time = () => {
     
     document.getElementById('date').textContent = date;
 
-    document.getElementById('time').setAttribute('data-full-date', long_date);
+    document.getElementById('time').setAttribute('data-description', long_date);
     setTimeout(get_Time, 60000);
 
 }
