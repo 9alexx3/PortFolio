@@ -84,21 +84,14 @@ const get_Weather = () => {
 }
 
 let code
-const weather = document.getElementById('weather-main')
+const weather = document.getElementById('weather-main');
 
 get_Weather()
 
-    const list_click = ['taskbar-objects--description', 'taskbar-objects--temperature','taskbar-icon', 'weather-main', '']
-    // weather.addEventListener("click", (e) => {
-    //     if (background.style.)
-    //     background.style.visibility = "visible"
-    //     console.log(background.style.display)
-    // })
-
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest("#weather-main") && !e.target.closest("#weather-bg")) {
-            background.style.visibility = "hidden";
-        }else{
-            background.style.visibility = "visible";
-        }
-    })
+document.addEventListener("click", (e) => {
+    if (!e.target.closest("#weather-main") && !e.target.closest("#weather-bg")) {
+        background.style.visibility = "hidden";
+    }else{
+        background.style.visibility = "visible";
+    }
+})
