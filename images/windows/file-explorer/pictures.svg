@@ -1,0 +1,8 @@
+<svg fill="#000000" width="16px" height="16px" viewBox="0 0 24 24" id="gallery" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier">
+<rect id="primary" x="2" y="3" width="20" height="18" rx="2" style="fill: #1590d9;"/>
+<path id="secondary" d="M22,17.71V19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V16.73A1,1,0,0,1,2.29,16L8,10.31a1,1,0,0,1,1.42,0l4.07,4.08,2.09-2.1a1,1,0,0,1,1.42,0L21.71,17A1,1,0,0,1,22,17.71ZM15,6a1.5,1.5,0,1,0,1.5,1.5A1.5,1.5,0,0,0,15,6Z" style="fill: #ffff;"/>
+</g>
+</svg>
