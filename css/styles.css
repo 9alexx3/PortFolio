@@ -41,7 +41,8 @@ body {
     --hover-taskbar-color: #292929;
     --date-bg: #2c2c2c;
     --hover-icon: #292929;
-    --color-svg: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(0deg);
+    --color-svg-black: brightness(100) saturate(0) invert(0) sepia(0) hue-rotate(0deg);
+    --color-svg-white: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(0deg);
     --text-color: #fefefe;
     --taskbar-color: #1c1c1c;
     --wallpaper-color: linear-gradient(to right, #010a19, #061121, #081629, #091a32, #0a1e3b, #0a1e3b, #0a1e3b, #0a1e3b, #091a32, #081629, #061121, #010a19);
@@ -113,7 +114,9 @@ body {
     visibility: hidden;
     position: absolute;
     bottom: 5vh;
-  }
+    border-radius: 15px 15px 0 0;
+    min-width: 540px;
+}
   
 .temperatures-card {
     color: #fff;

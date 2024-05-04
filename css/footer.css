@@ -110,9 +110,12 @@
     height: 16px;
     margin: 0 8px;
 }
-  
-.color-svg {
-    filter: var(--color-svg)
+
+.svg-white {
+    filter: var(--color-svg-white);
+}
+.svg-black {
+    filter: var(--color-svg-black);
 }
   
 .widgets > .icon-list > img {
