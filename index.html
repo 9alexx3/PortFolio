@@ -4,83 +4,692 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio A-Castell</title>
-    <link rel="preload" href="./fonts/Segoe-UI.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="./images/windows/wallpapers/W11.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/errors/windows/menu-windows.css">
-    
+    <link rel="stylesheet" href="./css/menu-windows.css">
+    <link rel="stylesheet" href="./css/weather.css">
+    <link rel="stylesheet" href="./css/warning.css">
+    <link rel="stylesheet" href="./css/powershell.css">
+    <link rel="stylesheet" href="./css/right.css">
+    <link rel="stylesheet" href="./css/calculadora.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/caledar.css">
+    <link rel="stylesheet" href="./css/file-explorer.css">
+    <link rel="stylesheet" href="./css/apps.css">
+
 </head>
 
 <body class="dark-theme">
-
+    
     <main class="desktop-background" id="desktop">
-        <div class="desktop-settings"></div>
         <div class="desktop-icons-container">
             <ul class="icons" id="milista">
                 <li class="icon" id="Recycle_Bin">
-                    <img src="./images/windows/icons/bin.png" alt="Recycle Bin">
+                    <img src="./images/windows/icons/bin.png" alt="Paper Bin Icon">
                     <span class="icon--text">Recycle Bin</span>
-                </li>
+                </li>   
 
                 <li class="icon" id="Google_Chrome">
-                    <img src="./images/essencials/chrome.svg" alt="Settings">
+                    <span class="nova">&#xE000;</span>
                     <span class="icon--text">Google Chrome</span>
                     
                 </li>
 
                 <li class="icon" id="Download_CV">
-                    <img src="./images/essencials/cv.png" alt="CV">
+                    <span class="nova">&#xE393;</span>
                     <a class="icon--text" href="#" download="Mi PDF">Download CV</a>
                 </li>
 
                 <li class="icon" id="LinkedIn" onclick="click_icon()">
-                    <img src="./images/essencials/linkedin.svg" alt="LinkedIn">
+                    <span class="nova">&#xE002;</span>
                     <span class="icon--text">LinkedIn</span>
                 </li>
 
                 <li class="icon" id="GitHub" onclick="window.open('https://github.com/9alexx3')">
-                    <img src="./images/essencials/github2.svg" alt="GitHub">
+                    <!-- <img src="./images/essencials/github.svg" alt="GitHub"> -->
+                    <span class="nova">&#xE003;</span>
                     <span class="icon--text">GitHub</span>
                 </li>
 
                 <li class="icon" id="Projects">
-                    <img src="./images/windows/icons/projects.svg" alt="Projects">
+                    <span class="nova">&#xE007;</span>
                     <span class="icon--text">Projects</span>
                 </li>
 
                 <li class="icon" id="Certifications">
-                    <img src="./images/essencials/certs.svg" alt="Certs">
+                    <span class="nova">&#xE004;</span>
                     <span class="icon--text">Certifications</span>
                 </li>
 
                 <li class="icon" id="Screen_Recorder">
-                    <img src="./images/windows/icons/camera.svg" alt="Camera">
+                    <span class="nova">&#xE005;</span>
                     <span class="icon--text">Screen Recorder</span>
                 </li>
 
-                <li class="icon" id="PowerShell">
-                    <img src="./images/windows/icons/powershell.svg" alt="PowerShell">
+                <li class="icon" id="PowerShell-Icon">
+                    <span class="nova">&#xE001;</span>
                     <span class="icon--text">PowerShell</span>
                 </li>
 
                 <li class="icon" id="HackTheBox">
-                  <img src="./images/essencials/htb.svg" alt="HackTheBox">
+                   <span class="nova">&#xE006;</span>
                   <span class="icon--text">HackTheBox</span>
-              </li>
+                </li>
             </ul>
+
+            <!-- ! APPS -->
+
+                <!-- * WARNING REVISADO-->
+                <section class="warning-container apps" id="warning-container">
+                    <div class="title-bar title-bar-explorer">
+                        <h1 class="warning-title">Warning</h1>
+                        <div class="title-bar--right">
+                            <button class="close"><span class="nova" style="color: currentColor;">&#xE451;</span></button>
+                        </div>
+                    </div>
+            
+                    <div class="warning-mid">
+                        <div class="image-text-container">
+                            <img src="./images/windows/warning.webp" alt="">
+                            <div class="warning-text">
+                                <p>This project is a recreation of the Windows 11 desktop experience on the web, designed to showcase a portfolio. It was developed using native/vanilla web technologies such as HTML, CSS, and JavaScript, without any libraries or frameworks.</p>
+                                <br>
+                                <p>This site is not in any way affiliated with Microsoft and should not be confused with Microsoft's Operating System or Products.</p>
+
+                                <noscript>
+                                    <br>
+                                    <p>This website requires JavaScript to access all of its features. Please enable it or add an exception in your browser settings.</p>
+                                </noscript>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="warning-bottom">
+                        <button id="warning-accept">OK</button>
+                    </div>
+                </section>
+                
+                <!-- * POWERSHELL REVISADO -->
+                <section class="powershell-container apps anima" id="powershell">
+                    <section class="title-bar">
+                        <div class="title-bar--left">
+                            <div class="title-powershell">
+                                <div class="title-powershell-container">
+                                    <span class="nova">&#xE001;</span>
+                                    <span style="font-size: .9rem;">Windows PowerShell</span>
+                                    <span id="close-powershell" class="nova close-icon">&#xE451;</span>
+                                </div>
+                            </div>
+                            <div class="title-powershell-secondary">
+                                <div class="title-powershell-secondary-container">
+                                    <span class="title-powershell-secondary-icon divider">+</span>
+                                    <span class="nova">&#xE017;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-bar--right">
+                            <button><span class="nova">&#xE450;</span></button>
+                            <button><span class="nova">&#xE452;</span></button>
+                            <button class="close"><span class="nova">&#xE451;</span></button>
+                        </div>
+                    </section>
+                    <section class="powershell-text">
+                        <div id="copyright">
+                            <p>Windows PowerShell</p>
+                            <p>Copyright (C) Microsoft Corporation. All rights reserved for UI.</p>
+                            <br>
+                        </div>
+                        <div id="prompt-container" style="display:flex;flex-direction:column-reverse;">
+                            <div class="input-container">
+                                <span>PS C:\Users\acastell> </span>
+                                <input class="input-powershell" autocomplete="off" autofocus type="text" id="input-powershell"/>
+                            </div>
+                            <div id="output"></div>
+                            
+                        </div>
+                    </section>
+                </section>
+                
+
+                <!-- * CLICK DERECHO REVISADO -->
+                <section class="right-click">
+                    <button class="arrow">
+                        <div class="rc-title ">
+                            <span class="nova">&#xE558;</span>
+                            <span>View</span>
+                        </div>
+                    </button>
+
+                    <button class="arrow">
+                        <div class="rc-title">
+                            <span class="nova">&#xE606;</span>
+                            <span>Sort by</span>
+                        </div>
+                    </button>
+                    
+                    <button class="divider3">
+                        <div class="rc-title">
+                            <span class="nova">&#xE556;</span>
+                            <span>Refresh</span>
+                        </div>
+                    </button>
+                    
+                    <button class="arrow divider3">
+                        <div class="rc-title">
+                            <span class="nova">&#xE613;</span>
+                            <span>New</span>
+                        </div>
+                    </button>
+                    
+                    <button class="arrow">
+                        <div class="rc-title">
+                            <span class="nova">&#xE557;</span>
+                            <span>Display settings</span>
+                        </div>
+                    </button>
+                    
+                    <button class="arrow divider3">
+                        <div class="rc-title">
+                            <span class="nova">&#xE726;</span>
+                            <span>Personalize</span>
+                        </div>
+                    </button>
+                    
+                    <button class="divider3">
+                        <div class="rc-title">
+                            <span class="nova">&#xE559;</span>
+                            <span>Open in Terminal</span>
+                        </div>
+                    </button>
+                    
+                    <button>
+                        <div class="rc-title">
+                            <span class="nova">&#xE787;</span>
+                            <span>Show more options</span>
+                        </div>
+                    </button>
+                </section>
+
+
+                <!-- * CALCULADORA REVISADO-->
+                <!-- <section class="calculator-container apps anima" id="calculator">
+                    <section class="title-bar">
+                        <div class="title-bar--left">
+                            <span class="nova title-bar--icon">&#xE330;</span>
+                            <span class="title-text">Calculator</span>
+                        </div>
+                        <div class="title-bar--right">
+                            <button><span class="nova">&#xE450;</span></button>
+                            <button><span class="nova">&#xE452;</span></button>
+                            <button class="close"><span class="nova">&#xE451;</span></button>
+                        </div>
+                    </section>
+            
+                    <section class="calculator-options">
+                        <span class="type-name">Standard</span>
+                        <span id="calculator-copy" class="nova b">&#xE555;</span>
+                    </section>
+            
+                    <section class="calculator">
+                        <input type="text" disabled class="display2 calculator-input" name="display2" readonly />
+                        <input type="text" value="0" readonly class="display calculator-input"/>
+                        <section class="calculator-memory">
+                            <button class="mry off">MC</button>
+                            <button class="mry off">MR</button>
+                            <button class="mry on">M+</button>
+                            <button class="mry on">M-</button>
+                            <button class="mry on">MS</button>
+                            <button class="mry off">M <span class="nova">&#xE017;</span></button>
+                        </section>
+
+                        <section class="calculator-buttons">
+                            <button class="calculator-button calculator-operator calculator-size">%</button>
+                            <button class="calculator-button calculator-operator">CE</button>
+                            <button class="calculator-button calculator-operator">C</button>
+                            <button class="calculator-button calculator-operator" data-operation="delete">&#9003;</button>
+                            <button class="calculator-button calculator-operator" data-operation="reciprocal"><sup>1</sup>/x</button>
+                            <button class="calculator-button calculator-operator" data-operation="power"><sup>2</sup>x</button>
+                            <button class="calculator-button calculator-operator" data-operation="sqrt"><sup>2</sup>&#8730;x</button>
+                            <button class="calculator-button calculator-operator calculator-size" data-operation="/">÷</button>
+                            <button class="calculator-button calculator-number">7</button>
+                            <button class="calculator-button calculator-number">8</button>
+                            <button class="calculator-button calculator-number">9</button>
+                            <button class="calculator-button calculator-operator calculator-size" data-operation="*">x</button>
+                            <button class="calculator-button calculator-number">4</button>
+                            <button class="calculator-button calculator-number">5</button>
+                            <button class="calculator-button calculator-number">6</button>
+                            <button class="calculator-button calculator-operator" data-operation="-">—</button>
+                            <button class="calculator-button calculator-number">1</button>
+                            <button class="calculator-button calculator-number">2</button>
+                            <button class="calculator-button calculator-number">3</button>
+                            <button class="calculator-button calculator-operator calculator-size">+</button>
+                            <button class="calculator-button calculator-number">+/-</button>
+                            <button class="calculator-button calculator-number">0</button>
+                            <button class="calculator-button calculator-number">.</button>
+                            <button class="calculator-button calculator-equal">=</button>
+                        </section>
+                    </section>
+                </section> -->
+
+
+                <!-- * SETTINGS PENDIENTE POR ARREGLAR MUCHAS COSAS -->
+                <section class="file-explorer-container apps anima show" id="settings">
+                    <section class="title-bar">
+                        <div class="title-bar--left">
+                            <span style="filter: opacity(.2);" class="nova title-bar--icon">&#xE610;</span>
+                            <span class="title-text">Settings</span>    
+                        </div>
+                        <div class="title-bar--right">
+                            <button><span class="nova">&#xE450;</span></button>
+                            <button><span class="nova">&#xE452;</span></button>
+                            <button class="close"><span class="nova">&#xE451;</span></button>
+                        </div>
+                    </section>
+
+                    <!--  -->
+                    <section class="file-explorer-main">
+                        <aside class="nav-panel">
+                            <nav style="width: 100%;">
+                                <div class="user-info">
+                                    <img src="../../../images/windows/icons/user.svg" alt="User">
+                                    <div class="user-details">
+                                        <h2>AlejandroC</h2>
+                                        <span>Local Account</span>
+                                    </div>
+                                </div>
+            
+                                <div class="input-wrapper search-bar">
+                                    <input type="search" placeholder="Find a setting">
+                                </div>
+            
+                                <ul class="nav-list">
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE901;</span>
+                                        Home
+                                    </li>
+            
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE990;</span>
+                                        System
+                                    </li>
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE951;</span>
+                                        Bluetooth & devices
+                                    </li>
+            
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE992;</span>
+                                        Network & internet
+                                    </li>
+            
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE950;</span>
+                                        Personalization
+                                    </li>
+            
+                                    <li class="active-setting nav-list-item">
+                                        <span class="nova">&#xE994;</span>
+                                        Apps
+                                    </li>
+            
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE998;</span>
+                                        Accounts
+                                    </li>
+            
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE995;</span>
+                                        Time & language
+                                    </li>
+            
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE993;</span>
+                                        Gaming
+                                    
+                                    </li>
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE999;</span>
+                                        Accessibility
+                                    
+                                    </li>
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE952;</span>
+                                        Privacy & Security
+                                    
+                                    </li>
+                                    <li class="nav-list-item">
+                                        <span class="nova">&#xE743;</span>
+                                        Windows Update
+                                    </li>
+                                </ul>
+                            </nav>
+                        </aside>
+
+                        <div class="container">
+                            <header class="header">
+                                <div class="settings-title-container">
+                                    <h1>System</h1>
+                                </div>
+                                <div class="header-content">
+                                    <div class="device-info">
+                                        <img src="../../images/windows/wallpapers/W11-light.webp" alt="W11" class="device-image-system border">
+                                        <div class="device-details">
+                                            <h4>W11</h4>
+                                            <span>VirtualBox</span>
+                                        </div>
+                                    </div>
+                                    <div class="status-info">
+                                        <div class="status-item">
+                                            <span class="nova">&#xE742;</span>
+                                            <div class="home-info">
+                                                <h4>Ethernet</h4>
+                                                <span>Connected</span>
+                                            </div>
+                                        </div>
+                                        <div class="status-item">
+                                            <span class="nova">&#xE618;</span>
+                                            <div class="home-info">
+                                                <h4>Windows Update</h4>
+                                                <span>Last checked: 1 minute ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                                
+                            <div class="gaming-container">
+                                <div class="gaming-item">
+                                    <span class="nova device-image">&#xE869;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Display</h3>
+                                        <p>Monitor, brightness, night light, display profile</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova device-image">&#xE094;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Sound</h3>
+                                        <p>Volume levels, output, input, sound devices</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova device-image">&#xE339;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Notifications</h3>
+                                        <p>Alerts froma apps and system, do not disturb</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova device-image">&#xE904;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Power & battery</h3>
+                                        <p>Sleep, battery usage, battery saver</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE409;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Storage</h3>
+                                        <p>Storage spaces, drives, configuration rules</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova device-image">&#xE615;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Nearby sharing</h3>
+                                        <p>Discoverability, received files location</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE406;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Multitasking</h3>
+                                        <p>Snap windows, desktops, task switching</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span  class="nova device-image">&#xE400;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>For developers</h3>
+                                        <p>These settings are intended for development use only</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova device-image">&#xE703;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Activation</h3>
+                                        <p>Activation state, subscriptions, product key</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE402;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Troubleshoot</h3>
+                                        <p>Recommended troubleshooters, preferences, history</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE403;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Recovery</h3>
+                                        <p>Reset, advanced startup, go back</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE405;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Projecting to this PC</h3>
+                                        <p>Permissions, pairing PIN, discoverability</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE404;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Remote Desktop</h3>
+                                        <p>Remote Desktop users, connection permissions</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE407;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Clipboard</h3>
+                                        <p>Cut and copy history, sync, clear</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova">&#xE408;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>System components</h3>
+                                        <p>Manage system components that are preinstalled on Windows</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span class="nova device-image">&#xE619;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>Optional features</h3>
+                                        <p>Extra functionally for your device</p>
+                                    </div>
+                                </div>
+                                <div class="gaming-item">
+                                    <span  class="nova device-image">&#xE738;</span>
+                                    <div class="gaming-text arrow">
+                                        <h3>About</h3>
+                                        <p>Device specifications, rename PC, Windows specifications</p>
+                                    </div>
+                                </div>
+                            </div> 
+            
+                        </div>
+                    </section>
+                </section>
+
+
+                <!-- * FILE EXPLORER REVISADO-->
+                <!-- <section class="fe-container apps anima" id="file-explorer">
+                    <section class="title-bar title-bar-explorer">
+                        <div class="title-bar--left">
+                            <div class="title-file-explorer">
+                                <span class="nova">&#xE901;</span>
+                                <span style="font-size: .9rem;">Home</span>
+                                <span class="nova close-icon">&#xE451;</span>
+                            </div>
+            
+                            <div class="title-bar-center">
+                                <span>+</span>
+                            </div>
+                        </div>
+                        
+                        <div class="title-bar--right">
+                            <button><span class="nova">&#xE450;</span></button>
+                            <button><span class="nova">&#xE452;</span></button>
+                            <button class="close"><span class="nova">&#xE451;</span></button>
+                        </div>
+                    </section>
+            
+                    <section class="fe-header fe-topmenu">
+                        <div class="button-container">
+                            <button>
+                                <span class="nova">&#xE610;</span>
+                            </button>
+                            
+                            <button>
+                                <span class="nova">&#xE611;</span>
+                            </button>
+                    
+                            <button>
+                                <span class="nova">&#xE612;</span>
+                            </button>
+
+                            <button>
+                                <span class="nova invert">&#xE556;</span>
+                            </button>
+                        </div>
+
+
+                        <div class="input-container input-left">
+                            <select id="selectChoice" name="choice">
+                                <option value="home" selected>Home</option>
+                                <option value="documents">Documents</option>
+                                <option value="projects">Documents > Projects</option>
+                                <option value="certifications">Documents > Certifications</option>
+                                <option value="desktop">Desktop</option>
+                                <option value="download">Download</option>
+                            </select>
+                        </div>
+                        <div class="input-container input-right">
+                            <input type="text" placeholder="Search">
+                        </div>
+                    </section>
+            
+                    <section class="fe-header">
+                        <div class="button-container fe-topmenu-buttons">
+            
+                            <button class="divider">
+                                <span class="nova">&#xE613;</span>
+                                <span>New <span class="nova">&#xE016;</span></span>
+                            </button>
+            
+                            <button disabled>
+                                <span class="nova">&#xE602;</span>
+                            </button>
+                            
+                            <button>
+                                <span class="nova">&#xE655;</span>
+                            </button disabled>
+                    
+                            <button>
+                                <span class="nova">&#xE609;</span>
+                            </button>
+            
+                            <button disabled>
+                                <span class="nova">&#xE603;</span>
+                            </button>
+            
+                            <button disabled>
+                                <span class="nova">&#xE605;</span>
+                            </button>
+            
+                            <button disabled class="divider">
+                                <span class="nova">&#xE601;</span>
+                            </button>
+            
+                            <button disabled>
+                                <span class="nova">&#xE606;</span>
+                                <span>Sort <span class="nova">&#xE016;</span></span>
+                            </button>
+            
+                            <button>
+                                <span class="nova">&#xE607;</span>
+                                <span>View <span class="nova">&#xE016;</span></span>
+                            </button>
+            
+                            <button class="divider">
+                                <span class="nova">&#xE698;</span>
+                                <span>Filter <span class="nova">&#xE016;</span></span>
+                            </button>
+            
+                            <button>
+                                <span class="nova">&#xE808;</span>
+                                <span>Details</span>
+                            </button>
+                        </div>
+                    </section>
+            
+            
+                    <section class="fe-main">
+                        <nav class="fe-main-nav" id="click">
+                            <ul>
+                                <li><span class="nova">&#xE901;</span>Home</li>
+                                <li class="divider2"><span class="nova">&#xF8CE;</span>Pictures</li>
+                            </ul>
+                            <ul>
+                                <li class="pinned" style="margin-top: 5px;"><span class="nova">&#xE990;</span>Desktop</li>
+                                <li class="pinned"><span class="nova">&#xE914;</span>Downloads</li>
+                                <li class="pinned"><img src="../../images/windows/file-explorer/document.webp" alt="Icon Document">Documents</li>
+                                <li class="pinned"><span class="nova">&#xE910;</span>Music</li>
+                                <li class="pinned"><span class="nova">&#xE913;</span>Videos</li>
+                                <li class="pinned divider2"> <img src="../../images/windows/icons/bin.png" alt="">Recycle Bin</li>
+                            </ul>
+                            <ul>
+                                <li style="margin-top: 5px;"><span class="nova">&#xE912;</span>This PC</li>
+                                <li><span class="nova">&#xE911;</span>Network</li>
+                            </ul>
+                        </nav>
+            
+                        <div class="fe-main-content">
+                            <table class="fe-main-table">
+                                <thead>
+                                    <tr>
+                                        <th class="fe-main-name fe-main-rows table-header">Name</th>
+                                        <th class="fe-main-date-type fe-main-rows table-header">Date Modified</th>
+                                        <th class="fe-main-date-type fe-main-rows table-header">Type</th>
+                                        <th class="fe-main-date-size fe-main-rows table-header">Size</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody">
+                                    <tr>
+                                        <td colspan="4" class="empty-row">This folder is empty.</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>  
+                    </section>
+                </section> -->
+                
         </div>
 
-        <div>
-            <!-- <iframe width="90%" height="70%" src="https://www.google.com/webhp?igu=1" frameborder="0" allowfullscreen="" loading="lazy"></iframe> !-->
-        </div>
-        
+
+        <div class="selector" id="selector"></div>
+
     </main>
 
-	<footer class="taskbar" id="footer">
+
+    <footer class="taskbar" id="footer">
 		<div id="weather-main" class="weather-info">
-		  <img id="taskbar-icon" src="./images/windows/weather/sunny.svg" alt="Soleado" class="weather-icon">
+           <span id="taskbar-icon" class="nova">&#xE008;</span>
 		  <div class="taskbar-objects">
 			<span id="taskbar-objects--temperature" class="temperature">Error</span>
 			<span id="taskbar-objects--description" class="description" >404</span>
@@ -89,7 +698,7 @@
 	  
         <div class="weather-card" id="weather-bg">
             <div class="temperatures-card">
-                <img id="weather_icon" class="img" src="./images/windows/weather/sunny.svg" alt=".">
+                <span id="weather_icon" class="nova">&#xE86C;</span>
                 <span id="temperature-card" class="temperature-card">Error</span>
                 <div class="weather-info-card">
                     <span id="status-weather" class="weather-status">404</span>
@@ -125,42 +734,41 @@
 
 		<div class="taskbar-items">
 			<ul class="icon-list">
-                <li class="icon-list--icon">
-                    <img class="icon-list--icon" src="./images/windows/icons/Windows_Explorer.svg" alt="File Explorer">
+                <li class="icon-list--icon" id="fe-Icon">
+                    <span class="nova icon-list--icon">&#xE875;</span>
                 </li>
 
-                <li class="icon-list--icon" id="menu-windows-container">
-                    <img class="icon-list--icon" src="./images/windows/icons/windows-logo.svg" alt="Windows Logo">
+                <li class="icon-list--icon" id="menu-windows-Icon">
+                    <span class="nova icon-list--icon">&#xE873;</span>
 
                     <div class="menu-windows" id="menu-windows">
                         <div class="menu-windows--search">
-                            <div class="input-container">
-                                <img src="./images/windows/icons/magnify.svg" alt="">
-                                <input type="text" placeholder="Search for apps, settings and documents">
+                            <div class="input-container menu-search-windows">
+                                <input class="input-windows" type="text" placeholder="Search for apps, settings and documents">
                             </div>
                         </div>
                     
                         <div class="menu-wrapper">
                             <div class="menu-windows--pins-texts">
-                                <span>Pinned</span>
-                                <button class="menu-windows--button">All apps <img class="menu-windows-button--button" src="./images/windows/icons/arrow-up.svg" alt="Arrow"></button>
+                                <span class="no-icon">Pinned</span>
+                                <button class="menu-windows--button">All apps <span class="nova menu-windows-button--button">&#xE018;</span></button>
                             </div>
                             
                     
                             <div class="top">
                                 <div class="menu-windows--icon-grid">
                                     <div class="menu-windows--icon">
-                                        <img src="./images/windows/icons/camera.svg" alt="Camera">
-                                        <div class="menu-windows--icon-title">Screen Recorder</div>
+                                        <span class="nova">&#xE005;</span>
+                                        <span class="menu-windows--icon-title">Screen Recorder</span>
                                     </div>
-                                    <div class="menu-windows--icon">
-                                        <img src="./images/windows/taskbar/menu/Calculator.svg" alt="Calculator">
-                                        <div class="menu-windows--icon-title">Calculator</div>
+                                    <div id="Calculator-Icon" class="menu-windows--icon">
+                                        <span class="nova">&#xE330;</span>
+                                        <span class="menu-windows--icon-title">Calculator</span>
                                     </div>
                                 
                                     <div class="menu-windows--icon">
-                                        <img src="./images/windows/icons/settings.svg" alt="Settings">
-                                        <div class="menu-windows--icon-title">Settings</div>
+                                        <span class="nova">&#xE872;</span>
+                                        <span class="menu-windows--icon-title">Settings</span>
                                     </div>
                             </div>
                        
@@ -168,17 +776,17 @@
 
                             <div class="top">
                                 <div class="menu-windows--pins-texts">
-                                    <span>Recommended</span>
+                                    <span class="no-icon">Recommended</span>
                                 </div>
                             
                                 <div class="menu-windows--icon-grid">
                                     <div class="menu-windows--icon" id="TopSecret">
-                                        <img src="./images/windows/icons/notepad.webp" alt="Notepad">
-                                        <div class="menu-windows--icon-title">Top Secret</div>
+                                        <span class="nova">&#xE435;</span>
+                                        <span class="menu-windows--icon-title">Top Secret</span>
                                     </div>
                                     <div class="menu-windows--icon">
-                                        <img src="./images/windows/icons/Windows_Explorer.svg" alt="File Explorer">
-                                        <div class="menu-windows--icon-title">File Explorer</div>
+                                        <span class="nova">&#xE875;</span>
+                                        <span class="menu-windows--icon-title">File Explorer</span>
                                     </div>
                                 </div>
                             </div>
@@ -187,16 +795,11 @@
                     
                         </div>
                             <div class="user-settings">
-                                
                                 <div class="user">
-                                    <img src="../../images/windows/icons/user.svg" alt="">
+                                    <span class="nova">&#xE716;</span>
                                     <span>Alejandro</span>
                                 </div>
-                        
-                                <svg style="margin-right: 2rem" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M705.6 124.9a8 8 0 0 0-11.6 7.2v64.2c0 5.5 2.9 10.6 7.5 13.6a352.2 352.2 0 0 1 62.2 49.8c32.7 32.8 58.4 70.9 76.3 113.3a355 355 0 0 1 27.9 138.7c0 48.1-9.4 94.8-27.9 138.7a355.92 355.92 0 0 1-76.3 113.3 353.06 353.06 0 0 1-113.2 76.4c-43.8 18.6-90.5 28-138.5 28s-94.7-9.4-138.5-28a353.06 353.06 0 0 1-113.2-76.4A355.92 355.92 0 0 1 184 650.4a355 355 0 0 1-27.9-138.7c0-48.1 9.4-94.8 27.9-138.7 17.9-42.4 43.6-80.5 76.3-113.3 19-19 39.8-35.6 62.2-49.8 4.7-2.9 7.5-8.1 7.5-13.6V132c0-6-6.3-9.8-11.6-7.2C178.5 195.2 82 339.3 80 506.3 77.2 745.1 272.5 943.5 511.2 944c239 .5 432.8-193.3 432.8-432.4 0-169.2-97-315.7-238.4-386.7zM480 560h64c4.4 0 8-3.6 8-8V88c0-4.4-3.6-8-8-8h-64c-4.4 0-8 3.6-8 8v464c0 4.4 3.6 8 8 8z"></path>
-                                </svg>
-                                
+                                <span class="nova">&#xE904;</span>
                             </div>
                     
                     
@@ -204,7 +807,7 @@
                 </li>
 
                 <li class="icon-list--icon">
-                    <img class="icon-list--icon" src="./images/windows/icons/settings.svg" alt="Settings">
+                    <span class="nova icon-list--icon">&#xE872;</span>
                 </li>
             </ul>
 
@@ -212,38 +815,65 @@
         
 		<div class="system-tray-icons"> 
 			<div class="icon-list">
-				<img class="system-tray-icons---icon svg-black" src="./images/windows/icons/arrow-up.svg" alt="Arrow-up">
-				<img class="system-tray-icons---icon" src="./images/windows/icons/defender.svg" alt="defender">
-				<img class="system-tray-icons---icon svg-black" src="./images/windows/icons/volume-high-solid.svg" alt="Volume">
-                <!-- <img class="system-tray-icons---icon svg-black hidden" src="./images/windows/icons/wired-connection.svg" alt="Ethernet"> -->
-				<img class="system-tray-icons---icon svg-black" src="./images/windows/icons/battery.svg" alt="Battery">
+                <span class="nova invert system-tray-icons---icon">&#xE098;</span>
+                <span class="nova system-tray-icons---icon">&#xE871;</span>
+                <span class="nova invert system-tray-icons---icon">&#xE094;</span>
+                <span class="nova invert system-tray-icons---icon">&#xE876;</span>
                 <div class="hover-right">
                     <div class="taskbar-objects" id="time"> 
                         <span class="date" id="clock">15:11</span>
                         <span class="date" id="date">13/02/2024</span>
-				</div>
-                <div class="icon-list" id="bell" data-description="No new notifications">
-                    <img class="system-tray-icons---icon svg-black" src="./images/windows/icons/bell-taskbar.svg" alt="Bell">
+				    </div>
+                    <div class="icon-list" id="bell" data-description="No new notifications">
+                        <span class="nova invert system-tray-icons---icon">&#xE339;</span>
+                    </div>
+
+                    <section class="calendar" id="calendar">
+                        <div class="calendar-header flex-center-spacebetween calendar-header-top">
+                            <span id="calendar-date-long">Wednesday, April 10</span>
+                            <button class="toggleCalendar" id="toggleCalendar"><span class="nova calendar-img">&#xE017;</span></button>
+                        </div>
+                
+                        <div class="calendar-header flex-center-spacebetween">
+                            <span id="currentMonthYear" class="calendar-date-short">April 2024</span>
+                            <div>
+                                <button id="prevMonth" class="calendar-button changeMonth"><span class="calendar-img nova">&#xE016;</span></button>
+                                <button id="nextMonth" class="calendar-button changeMonth"><span class="calendar-img nova">&#xE017;</span></button>
+                            </div>
+                        </div>
+                
+                        <ol class="weekdays-list calendar-grid">
+                            <li>Mo</li>
+                            <li>Tu</li>
+                            <li>We</li>
+                            <li>Th</li>
+                            <li>Fr</li>
+                            <li>Sa</li>
+                            <li>Su</li>
+                        </ol>
+                
+                        <ol class="days calendar-grid" id="calendarDays"></ol>
+                    </section>
+
                 </div>
-                </div>
-                <div class="empty"></div>
+                <div data-description="Show desktop" class="empty text-hover"></div>
 			</div>
 		</div>
-	  </footer>
+    </footer>
 
-
-    <!-- * OTROS DIVS -->
-    <div class="night-light"></div>
-    <div class="selector" id="selector"></div>
-    <div class="luminosity" id="luminosity"></div>
-
-    <!-- * JS -->
-    <script src="./js/events/click/screen-recorder.js"></script>
-    <script src="./js/DragSelector.js"></script>
     <script src="./js/clock.js"></script>
-    <script src="./js/events/menu-windows.js"></script>
-    <!-- <script src="./js/battery.js"></script> -->
+    <script src="./js/right-click.js"></script>
     <script src="./js/weather.js"></script>
-    <!-- <script src="./js/right-click.js"></script> -->
-</body> 
+    <script src="./js/calculadora.js"></script>
+    <script src="./js/DragSelector.js"></script>
+    <script src="./js/powershell.js"></script>
+    <script src="./js/events/menu-windows.js"></script>
+    <script src="./js/events/load.js"></script>
+    <script src="./js/events/click/screen-recorder.js"></script>
+    <script src="./js/events/click/click.js"></script>
+    <script src="./js/fe.js"></script>
+    <script src="./js/calendario.js"></script>
+
+</body>
+</style>
 </html>

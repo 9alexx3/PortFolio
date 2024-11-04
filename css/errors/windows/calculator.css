@@ -26,7 +26,6 @@
 .calculator-container {  
     height: 70%;
     width: 24%;
-    border: 1px solid;
     border-radius: 8px;
     background: var(--calculator-bg);
     overflow: hidden;

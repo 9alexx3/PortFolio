@@ -1,0 +1,362 @@
+:root {
+    --fe-bg: light-dark(#fff, #191919);
+    --fe-color: light-dark(#1d100e, #fbfbfb);
+    --fe-title-bar: light-dark(#e8e8e8, #202020);
+    --fe-title-bar-window: light-dark(#f8f8f8, #2c2c2c);
+    --fe-title-bar-buttons: light-dark(#dfdfdf, #2d2d2d);
+    --border-topmenu: light-dark(#e6e6e6, #3a3a3a);
+    --fe-topmenu-hover: light-dark(#efefef,#383838);
+    --fe-content-hover: light-dark(#e5f3ff,#4d4d4d);
+    --fe-content-focus: light-dark(#cce8ff,#626262);
+    --color-fe-column: light-dark(navy, lightskyblue);
+
+    --svg-color: invert(0%) sepia(99%) saturate(0%) hue-rotate(134deg) brightness(104%) contrast(97%);
+}        
+
+
+.empty-row {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.fe-container {  
+    height: 70vh;
+    width: 55%;
+    min-width: 750px;
+    /* max-width: 1605px; */
+    /* min-height: 648px; */
+    background: var(--fe-bg);
+    color: var(--fe-color);
+    border: 1px solid rgba(170, 167, 167, .8);
+    min-width: 905px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fe-container .title-bar {
+    margin-bottom: .5rem;
+}
+
+.fe-container .title-bar .title-bar--left {
+    margin-bottom: -.5rem;
+}
+
+.title-bar--left .title-file-explorer {
+    background-color: var(--fe-title-bar-window);
+    border: thin solid rgba(192, 192, 192, .3);
+    border-radius: 10px 10px 0px 0px;
+    padding: .15rem .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.title-bar--left .title-file-explorer .nova {
+    font-size: 24px;
+    margin-right: .3rem;
+}
+
+.file-explorer .title-bar-explorer {
+    background: var(--fe-title-bar);
+}
+
+.svg-color {
+    filter: var(--svg-color);
+}
+
+.fe-container .title-bar .title-bar--left .title-file-explorer .close-icon {
+    font-size: 14px;
+    margin-right: .3rem;
+}
+
+.title-bar-center {
+    margin-left: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    align-content: center;
+    height: 85%;
+    flex-wrap: wrap;
+}
+
+.fe-header {
+    border: 1px solid var(--border-topmenu);
+    display: flex;
+    height: 2.85rem;
+    padding: 0.5rem 1rem;
+}
+
+.button-container {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.title-powershell-secondary-container .divider {
+    margin-right: 1.25rem;
+    height: 100%;
+}
+
+.button-container button:hover {
+    background-color: #ccc;
+    border-radius: 8px;
+}
+
+.button-container button .nova {
+    font-size: 16px;
+}
+
+.fe-topmenu {
+    background-color: var(--title-bar-window);
+}
+
+.fe-header .input-container {
+    align-items: end;
+    padding-left: 2rem;
+    border-radius: 5px;
+}
+
+.fe-header .input-container select:focus, .input-container input:focus {
+    border: none;
+    outline: none;
+}
+
+.fe-header .input-container select:focus option {
+    background-color: var(--fe-bg);
+    color: var(--fe-color);
+}
+
+.fe-header .input-container select,
+.fe-header .input-container input {
+    border: none;
+    background: transparent;
+    color: var(--fe-color);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1rem;
+}
+
+.input-left::before {
+    font-family: "Trickster";
+    content: "\E902\00A0\00A0\00A0\00A0\00A0\E018";
+    font-size: .85rem;
+    margin: auto 15px auto auto;
+} 
+
+.input-right::after {
+    font-family: "Trickster";
+    font-size: .75rem;
+    content: "\E614";
+    margin: auto;
+}
+
+
+.input-left {
+    width: calc(60% - 5.5rem);
+    background-color: var(--border-topmenu);
+    margin-right: 3rem;
+}
+
+.input-left input {
+    width: calc(100% - 1.5rem);
+    padding-left: 0.5rem;
+    border: none;
+
+}
+
+.input-right {
+    width: calc(40% - 5.5rem);
+    background-color: var(--border-topmenu);
+    padding-right: 1.5rem;
+}
+
+.input-right input {
+    width: calc(100%-1.5rem);
+    border: none;
+    height: 100%;
+}
+
+.fe-topmenu-buttons {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fe-topmenu-buttons button span:last-of-type:not(.nova) {
+    font-size: small;
+    border: 2px red;
+    margin-left: .45rem;
+    color: var(--fe-color);
+}
+
+button:disabled {
+    opacity: 30%;
+}
+
+.divider, .divider2, .pinned {
+    position: relative;
+}
+
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: -10px;
+    background-color: grey;
+    opacity: 100%;
+    height: 80%;
+    width: 1px;
+}
+
+.fe-main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow-y: auto;
+}
+
+.fe-main-nav {
+    min-height: 395px;
+    min-width: 184px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: thin solid gray;
+    padding-top: 1rem;
+    top: 0;
+    position: sticky;
+}
+
+.fe-main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-block: 5px;
+}
+
+.fe-main-nav ul li {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 0 10px 18%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+
+    font-size: .9em;
+}
+
+.fe-main-nav ul li img, .fe-main-nav ul li .nova {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    object-fit: contain;
+}
+
+.fe-main ul li:focus{
+    background-color: var(--fe-content-focus);
+}
+
+
+.divider2::before {
+    content: '';
+    position: absolute;
+    background-color: #e6e6e6;
+    margin-top: 70px;
+    width: 80%;
+    top: 125%;
+    left: 10%;
+    height: 1px;
+    margin-top: -0.5px;
+}
+
+.pinned::after {
+    content: "\E917";
+    font-family: "Trickster";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 10px;
+    top: 58%; 
+    transform: translateY(-50%);
+}
+
+
+.fe-main-rows {
+    padding-block: .8rem;
+    text-align: left;
+    border: none;
+    color: var(--fe-color);
+}
+
+.fe-main-rows .nova {
+    font-size: 1.95rem;
+    margin-inline: .6rem;
+}
+
+.fe-main-hover .fe-main-name img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 1.25rem;
+    margin-inline: .75rem .45rem;
+    vertical-align: middle;
+}
+
+.fe-main-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--fe-bg);
+    color: var(--fe-color);
+    display: inline-table;
+    margin-bottom: 10vh;
+}
+
+.table-header {
+    color: var(--color-fe-column);
+    font-weight: 400;
+    padding: 1rem;
+    text-align: left;
+}
+
+.fe-main-hover {
+    transition: background-color 0.3s ease;
+}
+
+.fe-main-hover:hover {
+    background-color: var(--fe-content-hover);
+}
+
+.fe-main-nav ul li:hover, .fe-main-hover:hover {
+    background-color: var(--fe-content-hover);
+}
+
+.fe-main-rows {
+    padding: 1rem;
+    text-align: left;
+}
+
+.fe-main-name {
+    width: 40%;
+    padding-left: 1rem;
+}
+
+.fe-main-date-type {
+    width: 25%;
+}
+
+.fe-main-date-size {
+    width: 10%;
+}

@@ -2,50 +2,113 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "Segoe UI", Arial, sans-serif; */
 }
 
-:root {
-    --wallpaper-color: linear-gradient(to right, #8fb4cf, #a4c4db,#7eabc8);
-    --taskbar-color: rgb(243, 243, 243, .85);
-    --taskbar-height: 5vh;
-    --text-color: #0e0e0e;
-    --color-svg: #0000;
-    --hover-icon: #f7f7f7;
-    --date-bg: #f9f9f9;
-    --hover-taskbar-color: #f7f7f7;
-}
-
-@font-face
-{
+@font-face {
     font-family: 'W11';
-    font-weight: normal;
-    font-style: normal;
-    src: url('../fonts/Segoe-UI.ttf');
+    src: url('../fonts/Segoe_UI/SegoeUI.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: "Trickster";
+    src:
+        local("Trickster"),
+        /* url("./fonts/1.otf") format("opentype"), */
+        /* url("./fonts/SettingsIcons.woff2.16bf0cf9a00-COLRv1.otf") format("opentype") */
+        url("../fonts/My-Icons-Windows-COLRv1.woff2") format("woff2");
+}
+
+.nova {
+    font-family: "Trickster", serif;
+    font-size: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.invert {
+    color: var(--color-svg);
 }
 
 body {
-    font-family: 'W11',Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: "W11", system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color-scheme: light;
+    background-image: var(--wallpaper-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.dark-theme {
+    color-scheme: dark;
+    --svg-color: invert(100%) sepia(8%) saturate(33%) hue-rotate(244deg) brightness(107%) contrast(108%);
+    --wallpaper-color: linear-gradient(to right, #010a19, #061121, #081629, #091a32, #0a1e3b, #0a1e3b, #0a1e3b, #0a1e3b, #091a32, #081629, #061121, #010a19);
+}
+
+
+:root {
+    --wallpaper-color: linear-gradient(to right, #8fb4cf, #94b7d1, #a4c4db, #a4c4db, #7eabc8, #7eabc8, #7eabc8, #7eabc8, #a4c4db, #94b7d1, #8fb4cf);   
+
+    --bg-color: light-dark(#f3f3f3, #202020);
+    --text-color: light-dark(#1d100e, #fbfbfb);
+    --desktop-icon-hover: light-dark(#acc3d4, #252f3c);
+
+    --title-bar-color: light-dark(#e8e8e8, #202020);
+    --title-bar-window: light-dark(#f8f8f8, #2c2c2c);
+    --title-bar-buttons: light-dark(#dfdfdf, #2d2d2d);
+
+    --svg-filter: light-dark(invert(0%) sepia(99%) saturate(0%) hue-rotate(134deg) brightness(104%) contrast(97%),
+    invert(100%) sepia(8%) saturate(33%) hue-rotate(244deg) brightness(107%) contrast(108%));
+
+    --border-topmenu: light-dark(#e6e6e6, #3a3a3a);
+    --topmenu-hover: light-dark(#efefef, #383838);
+
+    --content-select: light-dark(#fefefe, #373737);
+    --content-hover: light-dark(#eaeaea, #2d2d2d);
+    --content-focus: light-dark(#cce8ff, #626262);
+    --card-bg: light-dark(#fbfbfb, #2b2b2b);
+
+    --rg-bg: light-dark(#f9f9f9, #2c2c2c);
+    --rg-color: light-dark(#1a1a1a, #fff);
+    --rg-border: light-dark(#eaeaea, #3d3d3d);
+    --rg-bg-hover: light-dark(#f0f0f0, #383838);
+    --svg-color: light-dark(invert(0%) sepia(99%) saturate(0%) hue-rotate(134deg) brightness(104%) contrast(97%), invert(100%) sepia(8%) saturate(33%) hue-rotate(244deg) brightness(107%) contrast(108%));
+
+    --calculator-equal-bg: light-dark(#0067c0, #4cc2ff);
+    --calculator-numbers-bg: light-dark(#ffffff, #3c3c3c);
+    --calculator-operation-bg: light-dark(#f9f9f9, #333333);
+    --calculator-bg: light-dark( #f3f3f3, #202020);
+    --calculator-color: light-dark(#000, #fff);
+    --color-svg: light-dark(#0000, #fff); /* ! REPETIDO CON EL DE ARRIBA */
+    --svg-color: #2e2e3d; /* *  IMPORTANTE: SABER SI ES COLOR-SVG O SVG-COLOR  !*/ 
+    --text-color: light-dark(#0e0e0e, #fefefe);
+    --hover-taskbar-color: light-dark(#f7f7f7, #292929);
+    --hover-icon: light-dark(#f7f7f7, #292929); /* ! REPETIDO CON EL DE ARRIBA */
+    --date-bg: light-dark(#f9f9f9, #2c2c2c);
+    --taskbar-color: light-dark(rgb(243, 243, 243, .85), #1c1c1c);
+    --taskbar-height: 5vh;
+
+
+    --setings-bg: light-dark(#f3f3f3, #202020);
+    --setings-color: light-dark(#1d100e, #fbfbfb);
+
+    --setings-title-bar: light-dark(#e8e8e8, #202020);
+    --setings-title-bar-window: light-dark(#f8f8f8, #2c2c2c);
+    --setings-title-bar-buttons: light-dark(#dfdfdf, #2d2d2d);
+
+    --border-topmenu: light-dark(#e6e6e6, #3a3a3a);
+    --setings-topmenu-hover: light-dark(#efefef, #383838);
+
+    --setings-content-select: light-dark(#fefefe, #373737);
+    --settings-cards: light-dark(#fbfbfb, #2b2b2b);
+    --setings-content-hover: light-dark(#eaeaea, #2d2d2d);
+    --setings-content-focus: light-dark(#cce8ff, #626262);
+
+    --color-svg: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(0deg);
 }
 
 .icon--text {
     margin-top: 0.25rem;
     color: var(--text-color);
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
     text-decoration: none;
-}
-
-.dark-theme {
-    --hover-taskbar-color: #292929;
-    --date-bg: #2c2c2c;
-    --hover-icon: #292929;
-    --color-svg-black: brightness(100) saturate(0) invert(0) sepia(0) hue-rotate(0deg);
-    --color-svg-white: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(0deg);
-    --text-color: #fefefe;
-    --taskbar-color: #1c1c1c;
-    --wallpaper-color: linear-gradient(to right, #010a19, #061121, #081629, #091a32, #0a1e3b, #0a1e3b, #0a1e3b, #0a1e3b, #091a32, #081629, #061121, #010a19);
 }
 
 .desktop-background {
@@ -54,33 +117,25 @@ body {
     display: flex;
     margin: 0;
     background: url("../images/windows/wallpapers/W11.webp") center bottom / contain no-repeat;
-    background-color: var(--wallpaper-color);
-    color: var(--text-color);
-}
-
-.dark-theme {
-    background-image: var(--wallpaper-color);
-    color: var(--taskbar-color);
 }
 
 .desktop-icons-container {
     display: flex;
-    inset: 0px;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
 .icons {
-    padding: 1rem;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(5.5rem, 1fr));
-    list-style: none;
-    gap: 1.5rem;
-    align-items: start;
+    grid-template-columns: repeat(auto-fill, minmax(120px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(100px, auto));
     grid-auto-rows: minmax(0, 1fr);
+    list-style: none;
+    align-items: start;
+    padding: 1rem;
+    gap: 1.5rem;
 }
 
 .icon {
@@ -91,139 +146,29 @@ body {
     align-items: center;
     overflow: visible;
     max-width: 100%;
+    height: 100%;
+    width: 100%;
     cursor: pointer;
+    justify-content: center;
 }
 
+
 .icon:hover{
-    background-color: #252f3c;
+    background-color: var(--desktop-icon-hover);
 }
 
 .icon img {
-    width: 55%;
+    width: 55px;
 }
 
-
-/*  WEATHER */
-
-.weather-card {
-    width: 42%;
-    max-width: 600px;
-    height: 22%;
-    align-items: center;
-    padding: .75rem 3rem;
-    visibility: hidden;
+.selector {
     position: absolute;
-    bottom: 5vh;
-    border-radius: 15px 15px 0 0;
-    min-width: 540px;
-}
-  
-.temperatures-card {
-    color: #fff;
-    align-items: center;
-    display: flex;
-    width: 50%;
-    height: 50%;
-}
-  
-.temperature-card {
-    font-size: 3.5rem;
-    margin: 0 32px 0 16px;
-}
-  
-.weather-info-card {
-    line-height: 150%;
-  }
-  
-.weather-status {
-    font-size: 1.75rem;
-    font-weight: 600;
-    text-wrap: nowrap;
-}
-  
-.sensacion {
-    text-wrap: nowrap;
-    color: #e0e3e6;
-}
-  
-.img {
-    width: 70%;
-    height: 70%;
-}
-  
- 
-.weather-item {
-    position: relative;
-}
-  
-.weather-item::after {
-    content: '';
-    background-image: url('../images/windows/weather/icon-description.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: inline-flex;
-    height: 12px;
-    width: 12px;
-    margin-left: 3px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-  
-.weather-item:hover::before {
-    content: attr(data-description);
-    position: absolute;
-    border-radius: 10px;
-    bottom: 1.5rem;
-    background-color: #5b5656;
-    color: #fff;
-    padding: 2px 6px;
-    text-wrap: nowrap;
-    font-size: 12px;
-}
-  
- 
-.advanced-weather-info {
-    margin-top: 1.2rem;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    height: auto;
-    position: relative;
-}
-  
-.weather-item {
-    margin: 0;
-    font-size: .9rem;
-    font-weight: normal;
-    line-height: 16px;
-    opacity: 0.8;
-    color: #e0e3e6;
-}
-  
-.weather-text {
-    color: #e0e3e6;
-}
-  
-.icon-list .taskbar-objects::after {
-    content: attr(data-description); /* Utilizamos el atributo data para almacenar la fecha larga */
+    border: 1px solid #0078d7;
+    background-color: rgb(217 235 249 / 10%);
+    pointer-events: none;
+    /* overflow:scroll; */
     display: none;
-    position: absolute;
-    bottom: 3rem;
-    background-color: var(--date-bg);
-    color: var(--text-color);
-    padding: 5px;
-    text-wrap: nowrap;
-    right: 10px;  
+    /* display: flex; */
+    /* height: 100%; */
+    /* width: 100%; */
 }
-  
-.icon-list .taskbar-objects:hover::after {
-      display: block;
-}
-
-.show-weather {
-    display: block;
-    position: absolute;
-    bottom: 5vh;
-}   

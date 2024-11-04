@@ -1,0 +1,146 @@
+{
+	"documents": [
+		{
+			"name": "Projects",
+			"dateModified": "31/10/2024",
+			"type": "File folder",
+			"size": "3 MB",
+			"image": "E777",
+			"id": "projects"
+		},
+		{
+			"name": "Certifications",
+			"dateModified": "31/10/2024",
+			"type": "File folder",
+			"size": "2 MB",
+			"image": "E777",
+			"id": "file-certs"
+		}
+	],
+	"projects": [
+		{
+			"name": "NetSleuth",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E916",
+			"id": "netsleuth"
+		},
+		{
+			"name": "Hasher",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E916",
+			"id": "hasher"
+		},
+		{
+			"name": "DiskDossier",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E916",
+			"id": "diskdossier"
+		},
+		{
+			"name": "Hundred",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E916",
+			"id": "hundred"
+		},
+		{
+			"name": "Dummzip",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E916",
+			"id": "dumzip"
+		}
+	],
+	"certifications": [
+	],
+	"desktop": [
+		{
+			"name": "Google",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E000"
+		},
+		{
+			"name": "Download CV",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E393"
+		},
+		{
+			"name": "LinkedIn",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E002"
+		},
+		{
+			"name": "GitHub",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E003"
+		},
+		{
+			"name": "Projects",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E007"
+		},
+		{
+			"name": "Certifications",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E004"
+		},
+		{
+			"name": "Screen Recorder",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E005"
+		},
+		{
+			"name": "PowerShell",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E001"
+		},
+		{
+			"name": "HackTheBox",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E006"
+		}
+	],
+	"downloads": [
+		{
+			"name": "CV",
+			"dateModified": "16/04/2024",
+			"type": "PDF",
+			"size": "217 KB",
+			"image": "E393",
+			"id": "file-cv"
+		},
+		{
+			"name": "Wazuh-Agent.msi",
+			"dateModified": "16/04/2024",
+			"type": "Binary File",
+			"size": "6,1 MB",
+			"image": "E430"
+		}
+	]
+}

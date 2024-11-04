@@ -1,4 +1,3 @@
-
 .taskbar {
     z-index: 1000;
     width: 100%;
@@ -22,6 +21,7 @@
     align-items: center;
     padding: 0rem 1.5rem;
     height: 100%;
+    cursor: pointer;
 }
 
 .taskbar-objects {
@@ -50,7 +50,7 @@
     text-wrap: nowrap
 }
   
-.weather-info > img {
+.weather-info .nova {
     width: 75%;
     height: 75%;
 }
@@ -77,12 +77,16 @@
 }
 
 .icon-list--icon {
+    height: 100%;
     width: 100%;
     list-style-type: none;
-    height: 100%;
     display: flex;
     align-items: center;
     text-align: center;
+    padding-inline: 18%;
+    font-size: 1.28em;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .icon-list--icon:hover {
@@ -93,32 +97,25 @@
     height: 100%;
 }
   
-.icon-list--icon {
-    width: 100%;
-    height: 100%;
-    padding: 5.5%;
-    
-}
-  
-.icon-list--icon > img {
-    width: 100%;
-    height: 100%;
+.taskbar-middle-icons {
+    width: 30px;
+    height: 30px;
+    padding: 10.5%;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .system-tray-icons---icon {
     width: 16px;
     height: 16px;
     margin: 0 8px;
+    font-size: 16px;
 }
 
-.svg-white {
-    filter: var(--color-svg-white);
-}
-.svg-black {
-    filter: var(--color-svg-black);
-}
   
-.widgets > .icon-list > img {
+.widgets > .icon-list > img, .widgets .nova {
     width: 1.2rem;
     height: 1.2rem;
     margin: 0 8px;
@@ -135,7 +132,7 @@
 
 
 .icon-list .taskbar-objects::after, #bell::after {
-    content: attr(data-description); /* Utilizamos el atributo data para almacenar la fecha larga */
+    content: attr(data-description);
     display: none;
     position: absolute;
     bottom: 3rem;
@@ -156,10 +153,10 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    padding-right: 5%;
+    padding-inline: 5%;
 }
 
-.hover-right:hover, .empty:hover  {
+.hover-right:hover  {
     background-color: var(--hover-taskbar-color);
 }
 

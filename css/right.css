@@ -1,0 +1,82 @@
+.right-click {
+    position: absolute;
+    background-color: var(--rg-bg);
+    color: var(--rg-color);
+    width: 215px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    height: max-content;
+    z-index: 1000;
+}
+
+.right-click button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.75rem;
+    background: none;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.right-click button:hover {
+    background-color: var(--rg-bg-hover);
+}
+
+.right-click button .nova {
+    height: 16px;
+    width: 16px;
+    object-fit: contain;
+    color: currentColor;
+}
+
+.right-click button .nova:last-child {
+    height: 12px;
+    font-size: 12px;
+    width: 12px;
+}
+
+.rc-title {
+    display: flex;
+    align-items: center;
+}
+
+.rc-title span {
+    margin-left: .8rem;
+    font-size: medium;
+}
+
+
+.divider3{
+    position: relative;
+}
+
+.divider3::before {
+    font-family: "";
+    content: "";
+    position: absolute;
+    background-color: var(--rg-border);
+    right: 0;
+    width: 100%;
+    top: 110%;
+    height: 1px;
+    margin-top: -0.5px;
+}
+
+
+.arrow, .wallpaper-svg {
+    position: relative;
+}
+
+.arrow::after {
+    content: '\E018';
+    font-size: 12px;
+    font-family: "Trickster";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}

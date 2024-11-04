@@ -1,0 +1,153 @@
+.calculator-container {  
+    height: 70%;
+    width: 24%;
+    max-width: 374px;
+    border-radius: 8px;
+    background: var(--calculator-bg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 1px 1px gray;
+    border: 1px solid #d4d4d4;
+    color: var(--calculator-color);
+}
+
+.title-bar--icon {
+    font-size: 22px;
+}
+
+.right .resize:hover {
+    background: #e6e6e6;
+}
+
+.calculator-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px;
+    margin-bottom: 4px;
+}
+
+.b {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.calculator {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-buttons {
+    display: grid;
+    gap: 4px;
+    height: 100%;
+    grid-template-columns: repeat(4, 24%);
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+    grid-template-rows: repeat(6, 16%);
+}
+
+.calculator-button {
+    color: var(--calculator-color);
+    border: 0;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: initial
+}
+
+.calculator-equal {
+    background-color: var(--calculator-equal-bg);
+    color: var(--calculator-bg);
+    font-size: x-large;
+}
+
+.calculator-number {
+    background-color: var(--calculator-numbers-bg);
+}
+
+.calculator-operator {
+    background-color: var(--calculator-operation-bg);
+}
+
+
+.calculator-button .calculator-number {
+    font-size: 1.2rem;
+}
+
+.calculator-button:hover {
+    filter: brightness(60%);
+}
+
+.title-text {
+    font-size: 1.05rem;
+    margin-left: .75rem;
+}
+
+.type-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.calculator-input {
+    padding: 4px;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    text-align: right;
+    border: 0;
+    background: transparent;
+}
+
+.calculator-memory {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.calculator-memory .mry {
+    width: 20%;
+    height: 30px;
+    padding: 1px;
+    font-size: 0.8rem;
+    border: none;
+    color: currentColor;
+    border-radius: 4px;
+    background: none;
+    transition: all 0.2s ease;
+}
+
+.calculator-memory .mry.off {
+    color: #949494;
+}
+
+.calculator-memory .mry.off .nova {
+    font-size: .5rem;
+}
+
+.calculator-size {
+    font-size: 1.25rem;
+}
+
+.display {
+    height: 45px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+    font-weight: 300;
+}
+
+.display2 {
+    font-size: 100%;
+    color: gray;
+}

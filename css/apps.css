@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10; /* Posiciona el div sobre el contenido de la página */
+    z-index: 10;
 }
   
 .luminosity {
@@ -17,7 +17,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10; /* Posiciona el div sobre el contenido de la página */
+    z-index: 10;
 }
   
 .selector {
@@ -26,4 +26,127 @@
     background-color: rgb(217 235 249 / 10%);
     pointer-events: none;
     display: none;
+}
+
+.close-icon {
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+/*  */
+
+.title-bar-explorer {
+    height: 2.55rem;
+    border-radius: 8px;
+}
+
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: .75rem;
+    height: 3rem;
+}
+
+
+.title-bar--right button {
+    transition: background 0.3s;
+    background: none;
+    cursor: pointer;
+    padding: 0.5rem 1.10rem;
+    border: 0;
+    color: currentColor;
+    border-radius: 5px;
+}
+
+.title-bar--right button .nova {
+    font-size: 1em;
+    color: var(--fe-color);
+}
+
+.close {
+    color: var(--fe-color);
+    background: var(--title-bar-buttons);
+} 
+
+.close:hover {
+    background-color: #c42b1c;
+    color: #faeeed;
+}
+
+.title-bar--right {
+    height: 100%;
+    display: inline-flex;
+}
+
+.title-bar--right button:not(:last-child):hover {
+    background: var(--border-topmenu);
+}
+
+.apps {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.title-bar--left {
+    display: flex;
+    align-items: center;
+}
+
+.fe-main-content {
+    height: 100%;
+    width: 100%;
+}
+
+.button-container button {
+    margin-right: 1rem;
+    background: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+/* ANIMACIÓN */
+
+.anima {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    border-radius: 8px;
+    margin: auto;
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s 0.4s;
+    transform: translate(-50%, -50%) scale(0.9);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;    
+}
+
+.anima.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    pointer-events: auto;
+}
+
+.anima.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0s 0.4s;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none; 
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }

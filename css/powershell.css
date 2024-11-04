@@ -1,0 +1,114 @@
+:root {
+    --color-powershell: light-dark(#eeedf0, #969696);
+    --title-bar-buttons: light-dark(#f0f0f0, #2e2e2e);
+    --powershell-bg: light-dark(#012456, #0c0c0c);
+}
+
+@font-face {
+    font-family: 'PowerShell';
+    font-weight: 400;
+    src: url('../fonts/PowerShell.woff2') format('woff2');
+}
+
+.powershell-container {  
+    height: 65%;
+    width: 48%;
+    background: var(--powershell-bg);
+    box-shadow: 0 0 1px 1px gray;
+    border: 1px solid #d4d4d4;
+    color: var(--color-powershell);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: "PowerShell";
+
+}
+
+.powershell-container .title-bar {
+    background-color: var(--title-bar-buttons);
+}
+
+.title-bar--left .title-powershell {
+    border: 1px solid #000;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0.2rem 0.5rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.title-bar--left .title-powershell .nova {
+    font-size: 1.4rem;
+    width: 24px;
+    margin-right: .65rem;
+}
+
+.title-bar--left .title-powershell .title-powershell-container .nova:last-child {
+    font-size: 1rem;
+    width: 8px;
+    margin-left: 3.5rem;
+}
+
+.title-powershell-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.title-powershell-secondary {
+    margin-left: 1.4rem;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-powershell-secondary-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.title-powershell-secondary-container span:last-of-type{
+    font-size: 14px;
+}
+
+.title-powershell-secondary-icon {
+    font-size: 1.5em;
+}
+
+.powershell-arrow {
+    filter: var(--color-svg);
+    rotate: 180deg;
+    width: .75rem;
+    height: .75rem;
+}
+
+.powershell-text {
+    padding: 1rem;
+    color: white;
+    overflow-y: auto;
+    scrollbar-width: thin;  
+}
+
+.input-powershell {
+    margin-left: .65rem;
+    outline: none;
+    background: transparent;
+    border: none;
+    flex: 1;
+    font-size: larger;
+    color: #f9f1a5;
+    word-wrap: break-word;
+    caret-color: white;
+}
+
+.prompt {
+    color: white;
+}
+
+.command {
+    color: #f9f1a5;
+    margin-left: .65rem;
+}

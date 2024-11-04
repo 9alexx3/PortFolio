@@ -1,0 +1,64 @@
+.warning-container {
+    color: black;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    max-width: 520px;
+}
+
+.warning-title {
+    font-size: 100%;
+    margin: auto 0;
+}
+
+.warning-mid {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: flex-start; 
+}
+
+.image-text-container img {
+    width: 50px;
+    margin-right: 10px; 
+}
+
+.warning-text {
+    flex-grow: 1; 
+}
+
+.warning-bottom {
+    text-align: right;
+    padding: 10px;
+}
+
+.warning-bottom button {
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 16px;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+    transform: translateY(2px);
+    height: 100%;
+}
+
+.warning-bottom button:hover {
+    background-color: #005a9e;
+}
+
+.warning-bottom button:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(4px)
+}
+
+.desktop-icons-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    position: relative;
+}

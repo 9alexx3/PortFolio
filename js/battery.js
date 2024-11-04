@@ -1,23 +1,23 @@
 console.log(navigator)
 // navigator.permissions
-// 
+// SOLO SI ES EDGE
 
 const getBattery = () => {
 
   if (!navigator.getBattery) {
     (async () => {
       // Carga el polyfill dinámicamente
-      const { default: batteryPolyfill } = await import('https://unpkg.com/battery-api-polyfill@2.0.1/dist/battery-api-polyfill.min.js');
+      var { default: batteryPolyfill } = await import('https://unpkg.com/battery-api-polyfill@2.0.1/dist/battery-api-polyfill.min.js');
       // Registra el polyfill
       batteryPolyfill.register();
   
       // Ahora puedes usar la API de batería
-      const battery = await navigator.getBattery();
+      var battery = await navigator.getBattery();
   
       console.log(battery.level); // Imprime el nivel de la batería
     })();
   } else {
-    console.log('HOLI DESDE BRAVE');
+    console.log('HOLI DESDE BATTERY.JS');
   }
   
 
