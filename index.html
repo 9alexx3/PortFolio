@@ -48,7 +48,6 @@
                 </li>
 
                 <li class="icon" id="GitHub" onclick="window.open('https://github.com/9alexx3')">
-                    <!-- <img src="./images/essencials/github.svg" alt="GitHub"> -->
                     <span class="nova">&#xE003;</span>
                     <span class="icon--text">GitHub</span>
                 </li>
@@ -214,7 +213,7 @@
 
 
                 <!-- * CALCULADORA REVISADO-->
-                <!-- <section class="calculator-container apps anima" id="calculator">
+                <section class="calculator-container apps anima" id="calculator">
                     <section class="title-bar">
                         <div class="title-bar--left">
                             <span class="nova title-bar--icon">&#xE330;</span>
@@ -271,11 +270,10 @@
                             <button class="calculator-button calculator-equal">=</button>
                         </section>
                     </section>
-                </section> -->
-
+                </section>
 
                 <!-- * SETTINGS PENDIENTE POR ARREGLAR MUCHAS COSAS -->
-                <section class="file-explorer-container apps anima show" id="settings">
+                <section class="file-explorer-container apps anima" id="settings">
                     <section class="title-bar">
                         <div class="title-bar--left">
                             <span style="filter: opacity(.2);" class="nova title-bar--icon">&#xE610;</span>
@@ -288,12 +286,11 @@
                         </div>
                     </section>
 
-                    <!--  -->
-                    <section class="file-explorer-main">
+                    <section class="settings-main">
                         <aside class="nav-panel">
                             <nav style="width: 100%;">
                                 <div class="user-info">
-                                    <img src="../../../images/windows/icons/user.svg" alt="User">
+                                    <span class="nova">&#xE716;</span>
                                     <div class="user-details">
                                         <h2>AlejandroC</h2>
                                         <span>Local Account</span>
@@ -367,167 +364,92 @@
                             </nav>
                         </aside>
 
-                        <div class="container">
+                        <main class="container" id="settings-container">
                             <header class="header">
-                                <div class="settings-title-container">
-                                    <h1>System</h1>
-                                </div>
-                                <div class="header-content">
-                                    <div class="device-info">
-                                        <img src="../../images/windows/wallpapers/W11-light.webp" alt="W11" class="device-image-system border">
-                                        <div class="device-details">
-                                            <h4>W11</h4>
-                                            <span>VirtualBox</span>
-                                        </div>
-                                    </div>
-                                    <div class="status-info">
-                                        <div class="status-item">
-                                            <span class="nova">&#xE742;</span>
-                                            <div class="home-info">
-                                                <h4>Ethernet</h4>
-                                                <span>Connected</span>
-                                            </div>
-                                        </div>
-                                        <div class="status-item">
-                                            <span class="nova">&#xE618;</span>
-                                            <div class="home-info">
-                                                <h4>Windows Update</h4>
-                                                <span>Last checked: 1 minute ago</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h1>Bluetooth & devices</h1>
                             </header>
-                                
-                            <div class="gaming-container">
-                                <div class="gaming-item">
-                                    <span class="nova device-image">&#xE869;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Display</h3>
-                                        <p>Monitor, brightness, night light, display profile</p>
+                            
+                            
+                            <div class="setting-gaming">
+                                <div class="gaming-container">
+                                    <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/blueetooth/devices.svg" alt="Devices">
+                                        <div class="gaming-text arrow">
+                                            <h3>Devices</h3>
+                                            <p>Mouse, keyboard, pen, audio, displays and docks, other devices</p>
+                                            <button class="select-pause add-device" >Add device</button>
+                                        </div>
+                                     </div>
+                            
+                                     <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/blueetooth/printer.svg" alt="Printers">
+                                        <div class="gaming-text arrow">
+                                            <h3>Printers & scanners</h3>
+                                            <p>Preferences, troubleshoot</p>
+                                        </div>
+                                     </div>
+                            
+                                     <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/blueetooth/mobile.svg" alt="Mobile">
+                                        <div class="gaming-text arrow">
+                                            <h3>Mobiles devices</h3>
+                                            <p>Instantly access your mobile devices from your PC</p>
+                                        </div>
+                                     </div>
+                                     
+                                     <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/menu/camera.svg" alt="Camera">
+                                        <div class="gaming-text arrow">
+                                            <h3>Cameras</h3>
+                                            <p>Connected cameras, default image settings</p>
+                                        </div>
+                                     </div>
+                            
+                                     <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/Accesibility/mouse.svg" alt="Mouse">
+                                        <div class="gaming-text arrow">
+                                            <h3>Mouse</h3>
+                                            <p>Buttons, mouse pointer speed, scrolling</p>
+                                        </div>
+                                     </div>
+                            
+                                     <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/blueetooth/touchpad.svg" alt="Mouse touchpad">
+                                        <div class="gaming-text arrow">
+                                            <h3>Touchpad</h3>
+                                            <p>Taps, gestures, scrolling, zooming</p>
+                                        </div>
+                                    </div>
+                                    <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/blueetooth/pen.svg" alt="Pen writing">
+                                        <div class="gaming-text arrow">
+                                            <h3>Pen & Windows Ink</h3>
+                                            <p>Right-handed or left-handed, pen button shortcuts, handwriting</p>
+                                        </div>
+                                    </div>
+                                    <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/blueetooth/autoplay.svg" alt="Autoplay">
+                                        <div class="gaming-text arrow">
+                                            <h3>Autoplay</h3>
+                                            <p>Defaults for removable drives and memory cards</p>
+                                        </div>
+                                    </div>
+                                    <div class="gaming-item">
+                                        <img class="svg-color" src="../../images/windows/settings/blueetooth/usb.svg" alt="asd">
+                                        <div class="gaming-text arrow">
+                                            <h3>USB</h3>
+                                            <p>Notifications, USB battery saver</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="gaming-item">
-                                    <span class="nova device-image">&#xE094;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Sound</h3>
-                                        <p>Volume levels, output, input, sound devices</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova device-image">&#xE339;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Notifications</h3>
-                                        <p>Alerts froma apps and system, do not disturb</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova device-image">&#xE904;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Power & battery</h3>
-                                        <p>Sleep, battery usage, battery saver</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE409;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Storage</h3>
-                                        <p>Storage spaces, drives, configuration rules</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova device-image">&#xE615;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Nearby sharing</h3>
-                                        <p>Discoverability, received files location</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE406;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Multitasking</h3>
-                                        <p>Snap windows, desktops, task switching</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span  class="nova device-image">&#xE400;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>For developers</h3>
-                                        <p>These settings are intended for development use only</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova device-image">&#xE703;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Activation</h3>
-                                        <p>Activation state, subscriptions, product key</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE402;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Troubleshoot</h3>
-                                        <p>Recommended troubleshooters, preferences, history</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE403;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Recovery</h3>
-                                        <p>Reset, advanced startup, go back</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE405;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Projecting to this PC</h3>
-                                        <p>Permissions, pairing PIN, discoverability</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE404;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Remote Desktop</h3>
-                                        <p>Remote Desktop users, connection permissions</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE407;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Clipboard</h3>
-                                        <p>Cut and copy history, sync, clear</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova">&#xE408;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>System components</h3>
-                                        <p>Manage system components that are preinstalled on Windows</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span class="nova device-image">&#xE619;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>Optional features</h3>
-                                        <p>Extra functionally for your device</p>
-                                    </div>
-                                </div>
-                                <div class="gaming-item">
-                                    <span  class="nova device-image">&#xE738;</span>
-                                    <div class="gaming-text arrow">
-                                        <h3>About</h3>
-                                        <p>Device specifications, rename PC, Windows specifications</p>
-                                    </div>
-                                </div>
-                            </div> 
-            
-                        </div>
+                            </div>
+                        </main>
                     </section>
                 </section>
 
 
                 <!-- * FILE EXPLORER REVISADO-->
-                <!-- <section class="fe-container apps anima" id="file-explorer">
+                <section class="fe-container apps anima" id="file-explorer">
                     <section class="title-bar title-bar-explorer">
                         <div class="title-bar--left">
                             <div class="title-file-explorer">
@@ -631,7 +553,7 @@
                             </button>
             
                             <button>
-                                <span class="nova">&#xE808;</span>
+                                <span class="nova">&#xE779;</span>
                                 <span>Details</span>
                             </button>
                         </div>
@@ -677,7 +599,7 @@
                             </table>
                         </div>  
                     </section>
-                </section> -->
+                </section>
                 
         </div>
 
@@ -741,7 +663,7 @@
                 <li class="icon-list--icon" id="menu-windows-Icon">
                     <span class="nova icon-list--icon">&#xE873;</span>
 
-                    <div class="menu-windows" id="menu-windows">
+                    <div class="menu-windows anima-slideup" id="menu-windows">
                         <div class="menu-windows--search">
                             <div class="input-container menu-search-windows">
                                 <input class="input-windows" type="text" placeholder="Search for apps, settings and documents">
@@ -828,7 +750,7 @@
                         <span class="nova invert system-tray-icons---icon">&#xE339;</span>
                     </div>
 
-                    <section class="calendar" id="calendar">
+                    <section class="calendar anima-slideup anima-slideup show" id="calendar">
                         <div class="calendar-header flex-center-spacebetween calendar-header-top">
                             <span id="calendar-date-long">Wednesday, April 10</span>
                             <button class="toggleCalendar" id="toggleCalendar"><span class="nova calendar-img">&#xE017;</span></button>

@@ -95,7 +95,7 @@ body {
     --setings-title-bar-buttons: light-dark(#dfdfdf, #2d2d2d);
 
     --border-topmenu: light-dark(#e6e6e6, #3a3a3a);
-    --setings-topmenu-hover: light-dark(#efefef, #383838);
+    --settings-topmenu-hover: light-dark(#efefef, #383838);
 
     --setings-content-select: light-dark(#fefefe, #373737);
     --settings-cards: light-dark(#fbfbfb, #2b2b2b);

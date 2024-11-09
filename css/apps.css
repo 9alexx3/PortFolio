@@ -61,7 +61,7 @@
 
 .title-bar--right button .nova {
     font-size: 1em;
-    color: var(--fe-color);
+    color: currentColor;
 }
 
 .close {
@@ -69,7 +69,7 @@
     background: var(--title-bar-buttons);
 } 
 
-.close:hover {
+.title-bar--right button + .close:hover {
     background-color: #c42b1c;
     color: #faeeed;
 }

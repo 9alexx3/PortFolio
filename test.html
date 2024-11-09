@@ -1,264 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla con Modo Claro/Oscuro</title>
-    <!-- <link rel="stylesheet" href="./css/file.css"> -->
-    <link rel="stylesheet" href="./css/file-explorer.css">
-    <style>
-        :root {
-            --fe-bg-light: #ffffff;
-            --fe-color-light: #1d100e;
-            --fe-bg-dark: #191919;
-            --fe-color-dark: #fbfbfb;
-            --fe-content-hover-light: #e5f3ff;
-            --fe-content-hover-dark: #4d4d4d;
-            --border-topmenu-light: #e6e6e6;
-            --border-topmenu-dark: #3a3a3a;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .switch {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 50px; /* Ancho del interruptor */
+      height: 30px; /* Altura del interruptor */
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--fe-bg-light);
-            color: var(--fe-color-light);
-            transition: background-color 0.3s, color 0.3s;
-        }
+    .switch .switching {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
 
-        .dark-theme {
-            --fe-bg: var(--fe-bg-dark);
-            --fe-color: var(--fe-color-dark);
-            --fe-content-hover: var(--fe-content-hover-dark);
-            --border-topmenu: var(--border-topmenu-dark);
-        }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 34px;
+      transition: background-color .4s, transform .4s;
+    }
 
-        body:not(.dark-theme) {
-            --fe-bg: var(--fe-bg-light);
-            --fe-color: var(--fe-color-light);
-            --fe-content-hover: var(--fe-content-hover-light);
-            --border-topmenu: var(--border-topmenu-light);
-        }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px; /* Tamaño del círculo */
+      width: 22px;  /* Tamaño del círculo */
+      left: 4px;    /* Espaciado a la izquierda */
+      bottom: 4px;  /* Espaciado al fondo */
+      background-color: white;
+      border-radius: 50%;
+      transition: transform .4s;
+    }
 
-        .fe-container {
-            width: 60%;
-            margin: 2rem auto;
-            background-color: var(--fe-bg);
-            color: var(--fe-color);
-            border: 1px solid rgba(170, 167, 167, .8);
-            box-shadow: 0 0 1px 1px gray;
-        }
+    .switching:checked + .slider {
+      background-color: #2196F3;
+    }
 
-        .fe-main-table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: var(--fe-bg);
-            color: var(--fe-color);
-        }
+    .switching:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
 
-        .table-header {
-            background-color: #f3f3f3;
-            color: #4b7dc4;
-            font-weight: 400;
-            padding: 1rem;
-            text-align: left;
-        }
+    .switching:checked + .slider:before {
+      transform: translateX(24px); /* Mueve el círculo al lado derecho */
+    }
 
-        .fe-main-hover {
-            transition: background-color 0.3s ease;
-        }
+    .switch-x-toggletext {
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 10px);
+      transform: translateY(-50%);
+      font-size: 12px;
+      pointer-events: none;
+    }
 
-        .fe-main-hover:hover {
-            background-color: var(--fe-content-hover);
-        }
+    .switch-x-toggletext span {
+      display: none;
+    }
 
-        /* Eliminar borde inferior de las filas */
-        .fe-main-rows {
-            padding: 1rem;
-            text-align: left;
-        }
+    .switch .switching:checked + .slider + .switch-x-toggletext .switch-x-checked {
+      display: inline-block;
+    }
 
-        .fe-main-name {
-            width: 40%;
-            padding-left: 1rem;
-        }
-
-        .fe-main-date-type {
-            width: 25%;
-        }
-
-        .fe-main-date-size {
-            width: 10%;
-        }
-
-        #toggleTheme {
-            margin: 1rem;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-    </style>
+    .switch .switching:not(:checked) + .slider + .switch-x-toggletext .switch-x-unchecked {
+      display: inline-block;
+    }
+  </style>
 </head>
-<body class="dark-theme">
-    <section class="fe-container apps anima show" id="file-explorer">
-        <section class="title-bar title-bar-explorer">
-            <div class="title-bar--left">
-                <div class="title-file-explorer">
-                    <span class="nova">&#xE901;</span>
-                    <span style="font-size: .9rem;">Home</span>
-                    <span class="nova close-icon">&#xE451;</span>
-                </div>
+<body>
 
-                <div class="title-bar-center">
-                    <span>+</span>
-                </div>
-            </div>
-            
-            <div class="title-bar--right">
-                <button><span class="nova">&#xE450;</span></button>
-                <button><span class="nova">&#xE452;</span></button>
-                <button class="close"><span class="nova">&#xE451;</span></button>
-            </div>
-        </section>
+  <label class="switch">
+    <input type="checkbox" class="switching">
+    <span class="slider"></span>
+    <div class="switch-x-toggletext">
+      <span class="switch-x-unchecked">Off</span>
+      <span class="switch-x-checked">On</span>
+    </div>
+  </label>
 
-        <section class="fe-header fe-topmenu">
-            <div class="button-container">
-                <button>
-                    <span class="nova">&#xE610;</span>
-                </button>
-                
-                <button>
-                    <span class="nova">&#xE611;</span>
-                </button>
-        
-                <button>
-                    <span class="nova">&#xE612;</span>
-                </button>
-
-                <button>
-                    <span class="nova invert">&#xE556;</span>
-                </button>
-            </div>
-
-
-            <div class="input-container input-left">
-                <select id="selectChoice" name="choice">
-                    <option value="home" selected>Home</option>
-                    <option value="documents">Documents</option>
-                    <option value="projects">Documents > Projects</option>
-                    <option value="certifications">Documents > Certifications</option>
-                    <option value="desktop">Desktop</option>
-                    <option value="download">Download</option>
-                </select>
-            </div>
-            <div class="input-container input-right">
-                <input type="text" placeholder="Search">
-            </div>
-        </section>
-
-        <section class="fe-header">
-            <div class="button-container fe-topmenu-buttons">
-
-                <button class="divider">
-                    <span class="nova">&#xE613;</span>
-                    <span>New <span class="nova">&#xE016;</span></span>
-                </button>
-
-                <button disabled>
-                    <span class="nova">&#xE602;</span>
-                </button>
-                
-                <button>
-                    <span class="nova">&#xE655;</span>
-                </button disabled>
-        
-                <button>
-                    <span class="nova">&#xE609;</span>
-                </button>
-
-                <button disabled>
-                    <span class="nova">&#xE603;</span>
-                </button>
-
-                <button disabled>
-                    <span class="nova">&#xE605;</span>
-                </button>
-
-                <button disabled class="divider">
-                    <span class="nova">&#xE601;</span>
-                </button>
-
-                <button disabled>
-                    <span class="nova">&#xE606;</span>
-                    <span>Sort <span class="nova">&#xE016;</span></span>
-                </button>
-
-                <button>
-                    <span class="nova">&#xE607;</span>
-                    <span>View <span class="nova">&#xE016;</span></span>
-                </button>
-
-                <button class="divider">
-                    <span class="nova">&#xE698;</span>
-                    <span>Filter <span class="nova">&#xE016;</span></span>
-                </button>
-
-                <button>
-                    <span class="nova">&#xE808;</span>
-                    <span>Details</span>
-                </button>
-            </div>
-        </section>
-
-
-        <section class="fe-main">
-            <nav class="fe-main-nav">
-                <ul>
-                    <li><span class="nova">&#xE901;</span>Home</li>
-                    <li class="divider2"><span class="nova">&#xF8CE;</span>Pictures</li>
-                </ul>
-                <ul>
-                    <li class="pinned" style="margin-top: 5px;"><span class="nova">&#xE990;</span>Desktop</li>
-                    <li class="pinned"><img src="../../images/windows/file-explorer/download.svg" alt="">Downloads</li>
-                    <li class="pinned"><img src="../../images/windows/file-explorer/document.webp" alt="">Documents</li>
-                    <li class="pinned"><span class="nova">&#xE910;</span>Music</li>
-                    <li class="pinned"><span class="nova">&#xE913;</span>Videos</li>
-                    <li class="pinned divider2"> <img src="../../images/windows/icons/bin.png" alt="">Recycle Bin</li>
-                </ul>
-                <ul>
-                    <li style="margin-top: 5px;"><span class="nova">&#xE912;</span>This PC</li>
-                    <li><span class="nova">&#xE911;</span>Network</li>
-                </ul>
-            </nav>
-
-            <div class="fe-main-content">
-                <table class="fe-main-table">
-                    <thead>
-                        <tr>
-                            <th class="fe-main-name fe-main-rows table-header">Name</th>
-                            <th class="fe-main-date-type fe-main-rows table-header">Date Modified</th>
-                            <th class="fe-main-date-type fe-main-rows table-header">Type</th>
-                            <th class="fe-main-date-size fe-main-rows table-header">Size</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody">
-                        <tr class="fe-main-hover">
-                            <td class="fe-main-name fe-main-rows"><span class="nova"></span> Google</td>
-                            <td class="fe-main-date-type fe-main-rows">09/10/2023</td>
-                            <td class="fe-main-date-type fe-main-rows">Shortcut</td>
-                            <td class="fe-main-date-size fe-main-rows">3 KB</td>
-                        </tr>
-                        <tr class="fe-main-hover">
-                            <td class="fe-main-name fe-main-rows"><span class="nova"></span> Download CV</td>
-                            <td class="fe-main-date-type fe-main-rows">09/10/2023</td>
-                            <td class="fe-main-date-type fe-main-rows">Shortcut</td>
-                            <td class="fe-main-date-size fe-main-rows">3 KB</td>
-                        </tr>
-                        <!-- Agrega más filas si es necesario -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </section>
-<script src="./js/fe2.js"></script>
 </body>
 </html>

@@ -203,17 +203,19 @@
     }
 }
 
-.menu-windows {
+.anima-slideup {
     transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease;
+    display: none;
+    visibility: hidden;
 }
 
-.menu-windows.show {
+.anima-slideup.show {
     animation: slideUp 0.3s forwards ease-out;
     display: block;
     visibility: visible;
 }
 
-.menu-windows.hide {
+.anima-slideup.hide {
     animation: slideDown 0.3s forwards ease-in;
     display: block;
     visibility: visible;  

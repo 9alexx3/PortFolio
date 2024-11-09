@@ -34,52 +34,7 @@
     background-color: var(--title-bar-color);
 }
 
-.title-bar-left {
-    display: flex;
-    align-items: flex-end;
-}
-
-.title-bar-left .explorer-title {
-    background-color: var(--title-bar-window);
-    border: thin solid #c0c0c04d;
-    border-radius: 10px 10px 0 0;
-    padding: .15rem .5rem;
-    display: flex;
-    align-items: center;
-}
-
-.title-bar-left .explorer-title img, .title-bar-left .explorer-title .nova {
-    height: 1.5rem;
-    margin-right: .3rem;
-}
-
-.button-group {
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.button-group button {
-    margin-right: 1rem;
-    background: none;
-    cursor: pointer;
-    padding: .5rem;
-    font-size: 1.2rem;
-    display: flex;
-}
-
-.button-group button:hover {
-    background-color: #ccc;
-    border-radius: 8px;
-}
-
-.button-group button:hover .icon-svg {
-    filter: invert(28%) sepia(45%) saturate(528%) hue-rotate(155deg) brightness(94%) contrast(92%);
-}
-
-.file-explorer-main {
+.settings-main {
     height: 100%;
     width: 100%;
     overflow-y: auto;
@@ -135,11 +90,6 @@
 
 .nav-list-item:focus {
     background-color: var(--content-focus);
-}
-
-.main-content {
-    height: 100%;
-    width: 100%;
 }
 
 .user-info {
@@ -220,15 +170,14 @@
     transform: translateX(-50%);
 }
 
-.button-group button .nova {
-    font-size: 1rem;
-}
-
 .gaming-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
 
+.gaming-container h2 {
+    margin-bottom: .35rem;
 }
 
 .gaming-item {
@@ -249,7 +198,11 @@
 }
 
 .gaming-text h3 {
-    font-weight: 550;
+    margin-bottom: 5px;
+}
+
+.gaming-text p {
+    color: var(--settings-subtext);
 }
 
 .container {
@@ -261,21 +214,19 @@
     border-radius: 10px;
 }
 
-.header .settings-title-container h1 {
-    font-size: 2em;
-}
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 1.25rem;
 }
 
 .device-info {
     display: flex;
-    height: 100%;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .device-image-system {
@@ -292,77 +243,56 @@
 .device-details {
     display: flex;
     flex-direction: column;
+    margin-left: 1.35rem;
 }
 
-.status-info {
+.status-info, .status-info2 {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.status-info2 {
+    justify-content: end;
 }
 
 .status-item {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
+    padding: 1rem;
+    padding-right: 50px;
+    width: max-content;
+}
+
+.settings-lang-title {
+    font-size: 2.45rem;
+    font-weight: 900;
 }
 
 .status-item .nova {
-    font-size: 2.25rem;
+    font-size: 1.45rem;
 }
 
 .status-item div {
     display: flex;
     flex-direction: column;
 }
-
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    margin: 1.25rem;
-}
-
-.recommended-settings ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.recommended-settings li {
-    margin: 10px 0;
-}
-
-.recommended-settings a {
-    color: #00aaff;
-    text-decoration: none;
-}
-
+ 
 .recommended-settings a:hover {
     text-decoration: underline;
 }
 
-.wallpapers img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.wallpapers img:hover {
-    transform: scale(1.05);
-}
-
-.home-info h4 {
-    font-size: .9rem;
-}
-
 .home-info span {
-    font-size: .85rem;
+    font-size: .95rem;
+    color: gray;
+}
+
+.home-info h3 {
+    font-size: .9rem;
+    margin-bottom: 5px;
 }
 
 .onedrive-button {
@@ -375,47 +305,59 @@
 
 .gaming-container .gaming-item .nova {
     font-size: 24px;
+    padding: .5rem;
 }
 
 .settings-title-container {
     background-color: var(--bg-color);
     padding-bottom: 1.5rem;
-    padding-top: .25rem;
+    padding-top: .35rem;
     position: fixed;
-    width: 100%;
+    width: 70%;
     z-index: 1000;
 }
 
-.container {
-    width: 65%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.add-device {
+    color: currentColor;
+    padding: 8px .55rem;
+    background-color: #c21c14;
     border-radius: 10px;
-    height: 100vh;
 }
 
-.settings-title-container {
-    position: fixed;
-    top: 0;
-    background-color: var(--bg-color);
-    width: 100%;
-    padding: 1.5rem 0 1rem;
-    z-index: 10;
-}
-
-.header-content {
+.help-icons {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
-.gaming-container {
+.help-icons .nova {
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+.device-image {
+    font-size: 7rem; 
+    /* margin-right: 25px; */
+    border-radius: 5px;
+}
+.settings-network {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    gap: 5px;
+    margin-top: .5rem;
+    color: var(--settings-subtext);
+}
+
+.settings-network span {
+    font-size: 1.25rem;
+}
+
+.status-item:hover, .gaming-item:hover {
+    background-color: var(--settings-topmenu-hover);
+}
+
+.header-margin {
+    margin-top: 4.25rem;
 }
 
 .gaming-item {
@@ -427,4 +369,232 @@
     background: var(--settings-cards);
     gap: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+/* TOGGLE */
+
+:root {
+    --bg-switch-on: light-dark(#0067c0, #4cc2ff);
+    --bg-switch-ball-on: light-dark(#fff, #000);
+    --bg-switch-off: light-dark(#f5f5f5, #272727);
+    --bg-switch-ball-off: light-dark(#5d5d5d, #cecece);
+    --border-switch: light-dark(#898989,#9c9c9c);
+
+    --settings-subtext: light-dark(gray, lightgray);
+}
+
+.switch {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 2.4em;
+    height: 46%;
+}
+  
+.switch .switching {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-switch-off);
+    border: groove 1px var(--border-switch);
+    /* ESTE ES EL FONDO OFF */
+    border-radius: 34px;
+    transition: background-color .5s, transform .5s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 60%;
+    width: 30%;
+    bottom: 4px;
+    background-color: var(--bg-switch-ball-off);
+    /* ESTE ES LA PELOTA */
+    border-radius: 50%;
+    transform: translate(50%);
+    transition: transform .4s;
+}
+  
+.switching:checked + .slider {
+    background-color: var(--bg-switch-on);
+}
+  
+.switching:checked + .slider:before {
+    transform: translateX(190%);
+    background-color: var(--bg-switch-ball-on);
+}
+  
+.switch-x-toggletext {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 10px);
+    transform: translateY(-50%);
+    font-size: 12px;
+    pointer-events: none;
+}
+  
+.switch-x-toggletext span {
+    display: none;
+}
+  
+.switch .switching:checked + .slider + .switch-x-toggletext .switch-x-checked {
+    display: inline-block;
+}
+  
+.switch .switching:not(:checked) + .slider + .switch-x-toggletext .switch-x-unchecked {
+    display: inline-block;
+} 
+
+.select-pause {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wallpaper-container {
+    padding: 1rem;
+    margin-left: 10%;
+}
+
+.wallpapers {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 120px));
+    grid-gap: 10px;
+    padding: 1rem;
+}
+
+.wallpaper-svg {
+    position: relative;
+}
+
+.wallpaper-svg:before {
+    content: url('../../wallpaper2.webp');
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+}
+
+.wallpapers img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #444;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.wallpapers img:hover {
+    transform: scale(1.05);
+}
+
+/*  */
+
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select select {
+    display: inline-block;
+    padding: 10px 5rem 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--setings-content-select);
+    color: var(--setings-color);
+    appearance: none;
+}
+
+.custom-select::after {
+    content: '';
+    background: url('../../images/windows/icons/arrow-up.svg') no-repeat center;
+    background-size: contain;
+    filter: var(--svg-color);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%) rotate(180deg);
+    pointer-events: none;
+}
+
+.recommended-settings > .nova {
+    margin: 1.25rem .5rem .5rem 1.25rem;
+    font-size: 1.65rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home-settings {
+    display: grid;
+    gap: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    align-items: baseline;
+    padding-top: .25rem;
+}
+
+.recommended-settings {
+    background-color: var(--settings-cards);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommended-settings h3 {
+    margin: 1.25rem .5rem .5rem 1.25rem;
+}
+
+.recommended-settings p {
+    color: gray;
+    font-size: 0.9em;
+    margin: .8rem .5rem 1.25rem 1.25rem
+}
+
+.setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.setting img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.setting-info h4 {
+    font-weight: normal;
+    margin-left: 1rem;
+}
+
+.setting-info .nova {
+    font-size: 1.75rem;
 }
