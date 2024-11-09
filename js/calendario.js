@@ -105,3 +105,44 @@ calendar_toggle.addEventListener('click', function() {
 
     calendar_toggle.classList.toggle('rotate-180');
 });
+
+
+
+const calendar = document.getElementById('calendar');
+const calendar2 = document.getElementById('time');
+const toggleCalendar = document.getElementById('toggleCalendar');
+
+// Mostrar el menú al hacer clic en el botón
+calendar2.addEventListener("click", (e) => {
+    // Evitar que el clic se propague y cierre el menú inmediatamente
+    e.stopPropagation();
+
+    if(toggleCalendar.id && e.target.id === "toggleCalendar"){
+        return calendar.classList.remove('collapsed');
+    }
+
+    if (!calendar.classList.contains('show')) {
+        calendar.classList.remove('hide');  // Asegúrate de que no tenga la clase hide
+        calendar.classList.add('show');
+        calendar.style.display = "block";  // Asegúrate de que el menú esté visible
+    }
+});
+
+// Ocultar el menú al hacer clic fuera de él
+document.addEventListener("click", (e) => {
+
+    if(toggleCalendar.id && e.target.id === "toggleCalendar" ){
+        return calendar.classList.remove('collapsed');
+    }
+
+    if (!e.target.closest("#calendar") && calendar.classList.contains('show')) {
+        calendar.classList.remove('show');
+        calendar.classList.add('hide');
+
+        // Espera que termine la animación para realmente ocultarlo
+        setTimeout(() => {
+            calendar.classList.remove('hide');  // Limpiar clase de ocultar
+            calendar.style.display = "none";  // Ocultar el menú
+        }, 300);  // Tiempo de la animación de cierre
+    }
+});

@@ -26,6 +26,7 @@
 
 .powershell-container .title-bar {
     background-color: var(--title-bar-buttons);
+
 }
 
 .title-bar--left .title-powershell {
@@ -42,6 +43,10 @@
     font-size: 1.4rem;
     width: 24px;
     margin-right: .65rem;
+}
+
+.powershell-container .title-bar--left {
+    align-items: end;
 }
 
 .title-bar--left .title-powershell .title-powershell-container .nova:last-child {
