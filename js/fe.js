@@ -17,9 +17,11 @@ const update = (selectedOption) => {
 
         data.forEach((item, index) => {
             const row = `
-                <tr class="${item.id} fe-main-hover ${index === data.length - 1 ? 'last-row' : ''}">
-                    <td class="fe-main-name fe-main-rows">
-                        <span class="nova">&#x${item.image};</span>
+            
+                <tr class="${item.id} fe-main-hover ${index === data.length - 1 ? 'last-row' : ''}" ${item.url !== "" ? `onclick="window.open('${item.url}')"` : `${item.type === "File folder" ? `onclick="update('${item.name.toLowerCase()}')"` : ``}`} ">
+                
+                <td class="fe-main-name fe-main-rows">
+                        ${item.is_image === false ? `<span class="nova">&#x${item.image};</span>` : `<img src="${item.image}" alt="${item.id}"/>`}
                         ${item.name}
                     </td>
                     <td class="fe-main-date-type fe-main-rows">${item.dateModified}</td>

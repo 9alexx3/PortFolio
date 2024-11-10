@@ -27,7 +27,7 @@
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "https://github.com/9alexx3/NetSleuth/blob/main/images/Logo.PNG?raw=true",
+			"image": "./images/windows/projects/netsleuth.webp",
 			"id": "netsleuth",
 			"url": "https://github.com/9alexx3/NetSleuth",
 			"is_image": true
@@ -84,13 +84,13 @@
 			"is_image": false
 		},
 		{
-			"name": "Alarma",
+			"name": "Discovery Nmap",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
 			"image": "E916",
 			"id": "hundred",
-			"url": "https://github.com/9alexx3/Alarma",
+			"url": "https://github.com/9alexx3/discovery-nmap",
 			"is_image": false
 		}
 	],

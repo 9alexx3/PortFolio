@@ -304,10 +304,8 @@ button:disabled {
     margin-inline: .6rem;
 }
 
-.fe-main-hover .fe-main-name img {
-    max-height: 100%;
-    max-width: 100%;
-    width: 1.25rem;
+.fe-main-name img {
+    width: 1.95rem;
     margin-inline: .75rem .45rem;
     vertical-align: middle;
 }

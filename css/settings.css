@@ -520,17 +520,17 @@
 }
 
 .custom-select::after {
-    content: '';
-    background: url('../../images/windows/icons/arrow-up.svg') no-repeat center;
-    background-size: contain;
-    filter: var(--svg-color);
+    content: '\E017';
+    font-family: "Trickster";
     position: absolute;
     top: 50%;
     right: 10px;
+    font-size: 12px;
     width: 12px;
     height: 12px;
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%);
     pointer-events: none;
+    display: inline-flex;
 }
 
 .recommended-settings > .nova {
