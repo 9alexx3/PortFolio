@@ -6,7 +6,9 @@
 			"type": "File folder",
 			"size": "3 MB",
 			"image": "E777",
-			"id": "projects"
+			"id": "projects",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "Certifications",
@@ -14,7 +16,9 @@
 			"type": "File folder",
 			"size": "2 MB",
 			"image": "E777",
-			"id": "file-certs"
+			"id": "file-certs",
+			"url": "",
+			"is_image": false
 		}
 	],
 	"projects": [
@@ -23,8 +27,11 @@
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E916",
-			"id": "netsleuth"
+			"image": "https://github.com/9alexx3/NetSleuth/blob/main/images/Logo.PNG?raw=true",
+			"id": "netsleuth",
+			"url": "https://github.com/9alexx3/NetSleuth",
+			"is_image": true
+
 		},
 		{
 			"name": "Hasher",
@@ -32,7 +39,9 @@
 			"type": "Shortcurt",
 			"size": "3 KB",
 			"image": "E916",
-			"id": "hasher"
+			"id": "hasher",
+			"url": "https://github.com/9alexx3/Hasher",
+			"is_image": false
 		},
 		{
 			"name": "DiskDossier",
@@ -40,7 +49,9 @@
 			"type": "Shortcurt",
 			"size": "3 KB",
 			"image": "E916",
-			"id": "diskdossier"
+			"id": "diskdossier",
+			"url": "https://github.com/9alexx3/DiskDossier",
+			"is_image": false
 		},
 		{
 			"name": "Hundred",
@@ -48,7 +59,9 @@
 			"type": "Shortcurt",
 			"size": "3 KB",
 			"image": "E916",
-			"id": "hundred"
+			"id": "hundred",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "Dummzip",
@@ -56,10 +69,42 @@
 			"type": "Shortcurt",
 			"size": "3 KB",
 			"image": "E916",
-			"id": "dumzip"
+			"id": "dumzip",
+			"url": "https://github.com/9alexx3/Dummzip",
+			"is_image": false
+		},
+		{
+			"name": "Alarma",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E916",
+			"id": "hundred",
+			"url": "https://github.com/9alexx3/Alarma",
+			"is_image": false
+		},
+		{
+			"name": "Alarma",
+			"dateModified": "09/10/2023",
+			"type": "Shortcurt",
+			"size": "3 KB",
+			"image": "E916",
+			"id": "hundred",
+			"url": "https://github.com/9alexx3/Alarma",
+			"is_image": false
 		}
 	],
 	"certifications": [
+		{
+			"name": "Cisco",
+			"dateModified": "16/04/2024",
+			"type": "PDF",
+			"size": "217 KB",
+			"image": "E393",
+			"id": "file-cv",
+			"url": "",
+			"is_image": false
+		}
 	],
 	"desktop": [
 		{
@@ -67,63 +112,81 @@
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E000"
+			"image": "E000",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "Download CV",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E393"
+			"image": "E393",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "LinkedIn",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E002"
+			"image": "E002",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "GitHub",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E003"
+			"image": "E003",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "Projects",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E007"
+			"image": "E007",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "Certifications",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E004"
+			"image": "E004",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "Screen Recorder",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E005"
+			"image": "E005",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "PowerShell",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E001"
+			"image": "E001",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "HackTheBox",
 			"dateModified": "09/10/2023",
 			"type": "Shortcurt",
 			"size": "3 KB",
-			"image": "E006"
+			"image": "E006",
+			"url": "",
+			"is_image": false
 		}
 	],
 	"downloads": [
@@ -133,14 +196,18 @@
 			"type": "PDF",
 			"size": "217 KB",
 			"image": "E393",
-			"id": "file-cv"
+			"id": "file-cv",
+			"url": "",
+			"is_image": false
 		},
 		{
 			"name": "Wazuh-Agent.msi",
 			"dateModified": "16/04/2024",
 			"type": "Binary File",
 			"size": "6,1 MB",
-			"image": "E430"
+			"image": "E430",
+			"url": "",
+			"is_image": false
 		}
 	]
 }

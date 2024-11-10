@@ -172,3 +172,15 @@ body {
     /* height: 100%; */
     /* width: 100%; */
 }
+
+.google {
+    height: 100%;
+    width: 100%;
+    background: lightgray;
+    color: black;
+    border: 1px solid #aaa7a7cc;
+    box-shadow: 0 0 1px 1px gray;
+    min-width: 905px;
+    display: flex;
+    flex-direction: column;
+}

@@ -26,23 +26,22 @@
     <main class="desktop-background" id="desktop">
         <div class="desktop-icons-container">
             <ul class="icons" id="milista">
-                <li class="icon" id="Recycle_Bin">
-                    <img src="./images/windows/icons/bin.png" alt="Paper Bin Icon">
+                <li class="icon" id="Recycle_Bin" onclick="alert('IN DEVELOPMENT');">
+                    <img src="./images/windows/icons/bin.webp" alt="Paper Bin Icon">
                     <span class="icon--text">Recycle Bin</span>
                 </li>   
 
                 <li class="icon" id="Google_Chrome">
                     <span class="nova">&#xE000;</span>
                     <span class="icon--text">Google Chrome</span>
-                    
                 </li>
 
                 <li class="icon" id="Download_CV">
                     <span class="nova">&#xE393;</span>
-                    <a class="icon--text" href="#" download="Mi PDF">Download CV</a>
+                    <a class="icon--text" href="./AlejandroCastell_Censurado.pdf" download="Mi PDF">Download CV</a>
                 </li>
 
-                <li class="icon" id="LinkedIn" onclick="click_icon()">
+                <li class="icon" id="LinkedIn" onclick="window.open('https://www.linkedin.com/in/alejandro-castell-alberola-a3b25b258/')">
                     <span class="nova">&#xE002;</span>
                     <span class="icon--text">LinkedIn</span>
                 </li>
@@ -62,7 +61,7 @@
                     <span class="icon--text">Certifications</span>
                 </li>
 
-                <li class="icon" id="Screen_Recorder">
+                <li class="icon" id="Screen_Recorder" onclick="Recorder()">
                     <span class="nova">&#xE005;</span>
                     <span class="icon--text">Screen Recorder</span>
                 </li>
@@ -72,7 +71,7 @@
                     <span class="icon--text">PowerShell</span>
                 </li>
 
-                <li class="icon" id="HackTheBox">
+                <li class="icon" id="HackTheBox" onclick="window.open('')">
                    <span class="nova">&#xE006;</span>
                   <span class="icon--text">HackTheBox</span>
                 </li>
@@ -143,7 +142,7 @@
                         <div id="prompt-container" style="display:flex;flex-direction:column-reverse;">
                             <div class="input-container">
                                 <span>PS C:\Users\acastell> </span>
-                                <input class="input-powershell" autocomplete="off" autofocus type="text" id="input-powershell"/>
+                                <input class="input-powershell" autocomplete="on" autofocus="yes" type="text" id="input-powershell"/>
                             </div>
                             <div id="output"></div>
                             
@@ -303,26 +302,16 @@
             
                                 <ul class="nav-list" id="settings-nav">
                                     <li class="nav-list-item active-setting"><span class="nova">&#xE901;</span>Home</li>
-            
                                     <li class="nav-list-item"><span class="nova">&#xE990;</span>System</li>
                                     <li class="nav-list-item"><span class="nova">&#xE951;</span>Bluetooth & devices</li>
-            
                                     <li class="nav-list-item"><span class="nova">&#xE992;</span>Network & internet</li>
-            
                                     <li class="nav-list-item"><span class="nova">&#xE950;</span>Personalization</li>
-            
-                                    <li class="nav-list-item"><span class="nova">&#xE994;</span>Apps</li>
-            
+                                    <li class="nav-list-item"><span class="nova">&#xE994;</span>Apps</li>    
                                     <li class="nav-list-item"><span class="nova">&#xE998;</span>Accounts</li>
-            
                                     <li class="nav-list-item"><span class="nova">&#xE995;</span>Time & language</li>
-            
-                                    <li class="nav-list-item"><span class="nova">&#xE993;</span>Gaming
-                                    </li>
-                                    <li class="nav-list-item"><span class="nova">&#xE999;</span>Accessibility
-                                    </li>
-                                    <li class="nav-list-item"><span class="nova">&#xE952;</span>Privacy & Security
-                                    </li>
+                                    <li class="nav-list-item"><span class="nova">&#xE993;</span>Gaming</li>
+                                    <li class="nav-list-item"><span class="nova">&#xE999;</span>Accessibility</li>
+                                    <li class="nav-list-item"><span class="nova">&#xE952;</span>Privacy & Security</li>
                                     <li class="nav-list-item"><span class="nova">&#xE743;</span>Windows Update</li>
                                 </ul>
                             </nav>
@@ -331,7 +320,7 @@
                         <main class="container" id="settings-container">
                             <header class="header">
                                 <div class="settings-title-container">
-                                    <h1>System</h1>
+                                    <h1>Home</h1>
                                 </div>
                                 <div class="header-content header-margin">
                                     <div class="device-info">
@@ -542,7 +531,7 @@
                                 <li class="pinned"><img src="../../images/windows/file-explorer/document.webp" alt="Icon Document">Documents</li>
                                 <li class="pinned"><span class="nova">&#xE910;</span>Music</li>
                                 <li class="pinned"><span class="nova">&#xE913;</span>Videos</li>
-                                <li class="pinned divider2"> <img src="../../images/windows/icons/bin.png" alt="">Recycle Bin</li>
+                                <li class="pinned divider2"> <img src="../../images/windows/icons/bin.webp" alt="">Recycle Bin</li>
                             </ul>
                             <ul>
                                 <li style="margin-top: 5px;"><span class="nova">&#xE912;</span>This PC</li>
@@ -569,8 +558,27 @@
                             </table>
                         </div>  
                     </section>
-                </section>   
-        </div>
+                </section>
+
+                <!-- * GOOGLE -->
+                <section class="google apps anima" id="chrome">
+                    <section class="title-bar">
+                        <div class="title-bar--left">
+                            <span class="nova title-bar--icon">&#xE000;</span>
+                            <span class="title-text">Chrome</span>    
+                        </div>
+                        <div class="title-bar--right">
+                            <button><span class="nova">&#xE450;</span></button>
+                            <button><span class="nova">&#xE452;</span></button>
+                            <button class="close"><span class="nova">&#xE451;</span></button>
+                        </div>
+                    </section>
+
+                    <section class="settings-main" id="g_chrome">
+                        <iframe style="height: 100%; width: 100%;" src="https://www.google.com/webhp?igu=1" frameborder="0" allowfullscreen="yes" loading="lazy"></iframe>
+                    </section>
+                </section>
+            </div>
 
 
         <div class="selector" id="selector"></div>
@@ -648,7 +656,7 @@
                     
                             <div class="top">
                                 <div class="menu-windows--icon-grid">
-                                    <div class="menu-windows--icon">
+                                    <div class="menu-windows--icon" onclick="Recorder()" >
                                         <span class="nova">&#xE005;</span>
                                         <span class="menu-windows--icon-title">Screen Recorder</span>
                                     </div>
@@ -657,7 +665,7 @@
                                         <span class="menu-windows--icon-title">Calculator</span>
                                     </div>
                                 
-                                    <div class="menu-windows--icon">
+                                    <div class="menu-windows--icon" id="Icon-Settings">
                                         <span class="nova">&#xE872;</span>
                                         <span class="menu-windows--icon-title">Settings</span>
                                     </div>
@@ -671,11 +679,11 @@
                                 </div>
                             
                                 <div class="menu-windows--icon-grid">
-                                    <div class="menu-windows--icon" id="TopSecret">
+                                    <div class="menu-windows--icon" id="TopSecret" onclick="alert('IN DEVELOPMENT');">
                                         <span class="nova">&#xE435;</span>
                                         <span class="menu-windows--icon-title">Top Secret</span>
                                     </div>
-                                    <div class="menu-windows--icon">
+                                    <div class="menu-windows--icon" id="FE2">
                                         <span class="nova">&#xE875;</span>
                                         <span class="menu-windows--icon-title">File Explorer</span>
                                     </div>
@@ -747,7 +755,7 @@
                     </section>
 
                 </div>
-                <div data-description="Show desktop" class="empty text-hover"></div>
+                <div data-description="Show desktop" class="text-hover empty"></div>
 			</div>
 		</div>
     </footer>

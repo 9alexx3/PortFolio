@@ -15,7 +15,7 @@
 }
 
 .file-explorer-container {  
-    height: 95vh;
+    height: 100%;
     width: 100%;
     background: var(--bg-color);
     color: var(--text-color);
