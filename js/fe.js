@@ -80,13 +80,14 @@ fe_icon2.addEventListener("click", (e) => {
 
 document.addEventListener("click", (e) => {
 
-    if(e.target.id === "Projects" && !file_explorer.classList.contains('show')) {
+    
+    if(e.target.closest("#Projects") && !file_explorer.classList.contains('show')) {
         update("projects");
         file_explorer.classList.remove('hide');
         file_explorer.classList.add('show');
     }
-
-    if(e.target.id === "Certifications" && !file_explorer.classList.contains('show')) {
+    
+    if(e.target.closest("#Certifications") && !file_explorer.classList.contains('show')) {
         update("certifications");
         file_explorer.classList.remove('hide');
         file_explorer.classList.add('show');

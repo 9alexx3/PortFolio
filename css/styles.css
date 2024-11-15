@@ -13,9 +13,8 @@
     font-family: "Trickster";
     src:
         local("Trickster"),
-        /* url("./fonts/1.otf") format("opentype"), */
-        /* url("./fonts/SettingsIcons.woff2.16bf0cf9a00-COLRv1.otf") format("opentype") */
-        url("../fonts/My-Icons-Windows-COLRv1.woff2") format("woff2");
+        url("../fonts/My-Icons-Windows-COLRv1.woff2") format("woff2"),
+        url("./fonts/My-Icons-Windows-COLRv1.otf") format("opentype");
 }
 
 .nova {
@@ -35,6 +34,7 @@ body {
     background-image: var(--wallpaper-color);
     color: var(--text-color);
     overflow: hidden;
+    user-select: none;
 }
 
 .dark-theme {
@@ -166,11 +166,7 @@ body {
     border: 1px solid #0078d7;
     background-color: rgb(217 235 249 / 10%);
     pointer-events: none;
-    /* overflow:scroll; */
     display: none;
-    /* display: flex; */
-    /* height: 100%; */
-    /* width: 100%; */
 }
 
 .google {

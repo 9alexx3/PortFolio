@@ -34,7 +34,7 @@ const qr = `
 █▄▄▄▄▄█ ██▄█  ▀█ ▄▄▀▄▀█▄▄  ▀ █▀▄ 
 
 
-\x1b[33m  Use white theme to scan the QR code. ${colors.reset}`
+\x1b[33m  Use white theme to scan the QR code.`
 console.log(emoji)
 console.log(qr)
 

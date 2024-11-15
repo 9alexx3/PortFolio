@@ -1,7 +1,3 @@
-console.log(navigator)
-// navigator.permissions
-// SOLO SI ES EDGE
-
 const getBattery = () => {
 
   if (!navigator.getBattery) {
@@ -16,13 +12,10 @@ const getBattery = () => {
   
       console.log(battery.level); // Imprime el nivel de la batería
     })();
-  } else {
-    console.log('HOLI DESDE BATTERY.JS');
   }
   
 
   navigator.getBattery().then((battery) => {
-    console.log(battery)
     const { charging, chargingTime, dischargingTime, level } = battery
   
     

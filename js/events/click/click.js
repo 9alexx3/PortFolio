@@ -14,6 +14,7 @@ powershell_button.addEventListener("click", (e) => {
 
 chrome_Icon.addEventListener("click", (e) => {
     e.stopPropagation();
+    
     if (!g_chrome.classList.contains('show')) {
         g_chrome.classList.remove('hide');
         g_chrome.classList.add('show');
