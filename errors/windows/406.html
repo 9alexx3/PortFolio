@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --bg: light-dark(#3973aa, #000);
+            --color: light-dark(white, lightgray);
+
+        }
+
+        body {
+            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--color);
+            height: 100vh;
+            margin: 0;
+            color-scheme: dark;
+        }
+
+        .dark-theme {
+            color-scheme: dark;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 90%;
+            margin: 0 auto;
+            font-size: 1rem;
+        }
+
+        h1, h2 {
+            font-weight: 300;
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 4em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            gap: 15px;
+        }
+
+        .image {
+            background: white;
+            padding: 5px;
+            line-height: 0;
+        }
+
+        .image img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .stopcode {
+            max-width: 100%;
+            text-align: left;
+            color: lightgray;
+        }
+
+        @media (min-width: 600px) {
+            h1 {
+                font-size: 5em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .details {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .stopcode {
+                padding-left: 10px;
+                text-align: left;
+            }
+
+            .image img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (min-width: 840px) {
+            .page {
+                font-size: 1.4rem;
+                width: 70%;
+            }
+
+            h1 {
+                font-size: 6.5em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .details {
+                flex-wrap: nowrap;
+            }
+
+            .image img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="page">
+        <div class="container">
+            <h1>:(</h1>
+            <h2>Your PC ran into a problem and needs to restart.</h2>
+            <h2>We're just collecting some error info, and then we'll restart for you.</h2>
+            <h2><span id="percentage">0</span>% complete</h2>
+            <div class="details">
+                <div class="image">
+                    <img src="/images/QR.webp" alt="QR Code" />
+                </div>
+                <div class="stopcode">
+                    <p>For more information about this issue and possible fixes, visit
+                        <br/>https://github.com/9alexx3/PortFolio</p>
+                    <p>If you call a support person, give them this info:
+                        <br/>Stop Code: 404 -- PAGE NOT FOUND</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const percentageElement = document.getElementById("percentage");
+        let percentage = 0;
+
+        const process = () => {
+            percentage += parseInt(Math.random() * 10);
+            if (percentage > 100) return window.location.href = "https://acastell.es";
+            percentageElement.innerText = percentage;
+            processInterval();
+        }
+
+        const processInterval = () => {
+            setTimeout(process, Math.random() * 2200)
+        }
+        processInterval();
+    </script>
+</body>
+</html>

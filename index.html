@@ -12,15 +12,16 @@
     <meta name="robots" content="index,nofollow" />
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Permissions-Policy" content="fullscreen=(self), clipboard-write=(self), camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=()">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; font-src 'self'; connect-src 'self' https://api.weatherapi.com; frame-src https://www.google.com; form-action 'none';">
-    <base href="https://acastell.es/">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; object-src 'none'; font-src 'self'; connect-src 'self' https://api.weatherapi.com; frame-src https://www.google.com; form-action 'none';"> -->
+    <!-- <base href="https://acastell.es/"> -->
+
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PortFolio A-Castell" />
     <meta property="og:description" content="PortFolio by Alejandro Castell " />
-    <meta property="og:image" content="https://acastell.es/portfolio.png" />
+    <meta property="og:image" content="https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg" />
     <meta property="og:url" content="permalink" />
-    <meta property="twitter:image" content="https://acastell.es/portfolio.png" />
+    <meta property="twitter:image" content="https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg" />
     <meta property="twitter:title" content="PortFolio A-Castell" />
     <meta property="twitter:description" content="PortFolio by Alejandro Castell " />
     <meta property="twitter:url" content="https://acastell.es" />
@@ -40,17 +41,19 @@
     <link rel="stylesheet" href="./css/caledar.css">
     <link rel="stylesheet" href="./css/file-explorer.css">
     <link rel="stylesheet" href="./css/apps.css">
+
+
 </head>
 
 <body class="dark-theme">
-    
+
     <main class="desktop-background" id="desktop">
         <div class="desktop-icons-container">
             <ul class="icons" id="milista">
-                <li class="icon" id="Recycle_Bin" nonce="nonce-csp" onclick="alert('IN DEVELOPMENT');">
+                <li class="icon" id="Recycle_Bin" onclick="alert('IN DEVELOPMENT');">
                     <img src="./images/windows/icons/bin.webp" alt="Paper Bin Icon">
                     <span class="icon--text">Recycle Bin</span>
-                </li>   
+                </li>
 
                 <li class="icon" id="Google_Chrome">
                     <span class="nova">&#xE000;</span>
@@ -59,21 +62,21 @@
 
                 <li class="icon" id="Download_CV">
                     <span class="nova">&#xE393;</span>
-                    <a class="icon--text" href="./CV-AlejandroC-Censurado.pdf" download="Mi PDF">Download CV</a>
+                    <a class="icon--text" href="./AlejandroCastell_Censurado.pdf" download="Mi PDF">Download CV</a>
                 </li>
 
-                <li class="icon" id="LinkedIn" nonce="nonce-csp" onclick="window.open('https://www.linkedin.com/in/alejandro-castell-alberola-a3b25b258/')">
+                <li class="icon" id="LinkedIn" onclick="window.open('https://www.linkedin.com/in/alejandro-castell-alberola-a3b25b258/')">
                     <span class="nova">&#xE002;</span>
                     <span class="icon--text">LinkedIn</span>
                 </li>
 
-                <li class="icon" id="GitHub" nonce="nonce-csp" onclick="window.open('https://github.com/9alexx3')">
+                <li class="icon" id="GitHub" onclick="window.open('https://github.com/9alexx3')">
                     <span class="nova">&#xE003;</span>
                     <span class="icon--text">GitHub</span>
                 </li>
 
                 <li class="icon" id="Projects">
-                    <span class="nova">&#xE00/span>
+                    <span class="nova">&#xE007;</span>
                     <span class="icon--text">Projects</span>
                 </li>
 
@@ -82,7 +85,7 @@
                     <span class="icon--text">Certifications</span>
                 </li>
 
-                <li class="icon" id="Screen_Recorder" nonce="nonce-csp" onclick="Recorder()">
+                <li class="icon" id="Screen_Recorder" onclick="Recorder()">
                     <span class="nova">&#xE005;</span>
                     <span class="icon--text">Screen Recorder</span>
                 </li>
@@ -92,11 +95,12 @@
                     <span class="icon--text">PowerShell</span>
                 </li>
 
-                <li class="icon" id="HackTheBox" nonce="nonce-csp" onclick="alert('IN DEVELOPMENT');">
-                   <span class="nova">&#xE00/span>
+                <li class="icon" id="HackTheBox" onclick="alert('IN DEVELOPMENT');">
+                   <span class="nova">&#xE006;</span>
                   <span class="icon--text">HackTheBox</span>
                 </li>
             </ul>
+
             <!-- ! APPS -->
 
                 <!-- * WARNING REVISADO-->
@@ -107,7 +111,7 @@
                             <button class="close"><span class="nova" style="color: currentColor;">&#xE451;</span></button>
                         </div>
                     </div>
-            
+
                     <div class="warning-mid">
                         <div class="image-text-container">
                             <img src="./images/windows/warning.webp" alt="">
@@ -123,12 +127,12 @@
                             </div>
                         </div>
                     </div>
-            
+
                     <div class="warning-bottom">
                         <button id="warning-accept">OK</button>
                     </div>
                 </section>
-                
+
                 <!-- * POWERSHELL REVISADO -->
                 <section class="powershell-container apps anima" id="powershell">
                     <section class="title-bar">
@@ -143,7 +147,7 @@
                             <div class="title-powershell-secondary">
                                 <div class="title-powershell-secondary-container">
                                     <span class="title-powershell-secondary-icon divider">+</span>
-                                    <span class="nova">&#xE01/span>
+                                    <span class="nova">&#xE017;</span>
                                 </div>
                             </div>
                         </div>
@@ -165,11 +169,11 @@
                                 <input class="input-powershell" autocomplete="on" autofocus="yes" type="text" id="input-powershell"/>
                             </div>
                             <div id="output"></div>
-                            
+
                         </div>
                     </section>
                 </section>
-                
+
 
                 <!-- * CLICK DERECHO REVISADO -->
                 <section class="right-click">
@@ -182,49 +186,49 @@
 
                     <button class="arrow">
                         <div class="rc-title">
-                            <span class="nova">&#xE/span>
+                            <span class="nova">&#xE606;</span>
                             <span>Sort by</span>
                         </div>
                     </button>
-                    
+
                     <button class="divider3">
                         <div class="rc-title">
-                            <span class="nova">&#xE55/span>
+                            <span class="nova">&#xE556;</span>
                             <span>Refresh</span>
                         </div>
                     </button>
-                    
+
                     <button class="arrow divider3">
                         <div class="rc-title">
-                            <span class="nova">&#xE;</span>
+                            <span class="nova">&#xE613;</span>
                             <span>New</span>
                         </div>
                     </button>
-                    
+
                     <button class="arrow">
                         <div class="rc-title">
-                            <span class="nova">&#xE55/span>
+                            <span class="nova">&#xE557;</span>
                             <span>Display settings</span>
                         </div>
                     </button>
-                    
+
                     <button class="arrow divider3">
                         <div class="rc-title">
-                            <span class="nova">&#xEspan>
+                            <span class="nova">&#xE726;</span>
                             <span>Personalize</span>
                         </div>
                     </button>
-                    
+
                     <button class="divider3">
                         <div class="rc-title">
                             <span class="nova">&#xE559;</span>
                             <span>Open in Terminal</span>
                         </div>
                     </button>
-                    
+
                     <button>
                         <div class="rc-title">
-                            <span class="nova">&#xE/span>
+                            <span class="nova">&#xE787;</span>
                             <span>Show more options</span>
                         </div>
                     </button>
@@ -244,12 +248,12 @@
                             <button class="close"><span class="nova">&#xE451;</span></button>
                         </div>
                     </section>
-            
+
                     <section class="calculator-options">
                         <span class="type-name">Standard</span>
                         <span id="calculator-copy" class="nova b">&#xE555;</span>
                     </section>
-            
+
                     <section class="calculator">
                         <input type="text" disabled class="display2 calculator-input" name="display2" readonly />
                         <input type="text" value="0" readonly class="display calculator-input"/>
@@ -259,7 +263,7 @@
                             <button class="mry on">M+</button>
                             <button class="mry on">M-</button>
                             <button class="mry on">MS</button>
-                            <button class="mry off">M <span class="nova">&#xE01/span></button>
+                            <button class="mry off">M <span class="nova">&#xE017;</span></button>
                         </section>
 
                         <section class="calculator-buttons">
@@ -269,15 +273,15 @@
                             <button class="calculator-button calculator-operator" data-operation="delete">&#9003;</button>
                             <button class="calculator-button calculator-operator" data-operation="reciprocal"><sup>1</sup>/x</button>
                             <button class="calculator-button calculator-operator" data-operation="power"><sup>2</sup>x</button>
-                            <button class="calculator-button calculator-operator" data-operation="sqrt"><sup>2</sup>&#8;x</button>
+                            <button class="calculator-button calculator-operator" data-operation="sqrt"><sup>2</sup>&#8730;x</button>
                             <button class="calculator-button calculator-operator calculator-size" data-operation="/">÷</button>
-                            <button class="calculator-button calculator-number">button>
+                            <button class="calculator-button calculator-number">7</button>
                             <button class="calculator-button calculator-number">8</button>
                             <button class="calculator-button calculator-number">9</button>
                             <button class="calculator-button calculator-operator calculator-size" data-operation="*">x</button>
                             <button class="calculator-button calculator-number">4</button>
                             <button class="calculator-button calculator-number">5</button>
-                            <button class="calculator-button calculator-number">button>
+                            <button class="calculator-button calculator-number">6</button>
                             <button class="calculator-button calculator-operator" data-operation="-">—</button>
                             <button class="calculator-button calculator-number">1</button>
                             <button class="calculator-button calculator-number">2</button>
@@ -295,8 +299,8 @@
                 <section class="file-explorer-container apps anima" id="settings">
                     <section class="title-bar">
                         <div class="title-bar--left">
-                            <span style="filter: opacity(.2);" class="nova title-bar--icon">&#xE;</span>
-                            <span class="title-text">Settings</span>    
+                            <span style="filter: opacity(.2);" class="nova title-bar--icon">&#xE610;</span>
+                            <span class="title-text">Settings</span>
                         </div>
                         <div class="title-bar--right">
                             <button><span class="nova">&#xE450;</span></button>
@@ -309,30 +313,30 @@
                         <aside class="nav-panel">
                             <nav style="width: 100%;">
                                 <div class="user-info">
-                                    <span class="nova">&#xEspan>
+                                    <span class="nova">&#xE716;</span>
                                     <div class="user-details">
                                         <h2>AlejandroC</h2>
                                         <span>Local Account</span>
                                     </div>
                                 </div>
-            
+
                                 <div class="input-wrapper search-bar">
                                     <input type="search" placeholder="Find a setting">
                                 </div>
-            
+
                                 <ul class="nav-list" id="settings-nav">
                                     <li class="nav-list-item active-setting"><span class="nova">&#xE901;</span>Home</li>
                                     <li class="nav-list-item"><span class="nova">&#xE990;</span>System</li>
                                     <li class="nav-list-item"><span class="nova">&#xE951;</span>Bluetooth & devices</li>
                                     <li class="nav-list-item"><span class="nova">&#xE992;</span>Network & internet</li>
                                     <li class="nav-list-item"><span class="nova">&#xE950;</span>Personalization</li>
-                                    <li class="nav-list-item"><span class="nova">&#xE994;</span>Apps</li>    
+                                    <li class="nav-list-item"><span class="nova">&#xE994;</span>Apps</li>
                                     <li class="nav-list-item"><span class="nova">&#xE998;</span>Accounts</li>
                                     <li class="nav-list-item"><span class="nova">&#xE995;</span>Time & language</li>
                                     <li class="nav-list-item"><span class="nova">&#xE993;</span>Gaming</li>
                                     <li class="nav-list-item"><span class="nova">&#xE999;</span>Accessibility</li>
                                     <li class="nav-list-item"><span class="nova">&#xE952;</span>Privacy & Security</li>
-                                    <li class="nav-list-item"><span class="nova">&#xE;</span>Windows Update</li>
+                                    <li class="nav-list-item"><span class="nova">&#xE743;</span>Windows Update</li>
                                 </ul>
                             </nav>
                         </aside>
@@ -352,14 +356,14 @@
                                     </div>
                                     <div class="status-info2">
                                         <div class="status-item">
-                                            <span class="nova">&#xE;</span>
+                                            <span class="nova">&#xE742;</span>
                                             <div class="home-info">
                                                 <h3>Ethernet</h3>
                                                 <span>Connected</span>
                                             </div>
                                         </div>
                                         <div class="status-item">
-                                            <span class="nova">&#xE;</span>
+                                            <span class="nova">&#xE743;</span>
                                             <div class="home-info">
                                                 <h3>Windows Update</h3>
                                                 <span>Last checked: 1 minute ago</span>
@@ -368,27 +372,27 @@
                                     </div>
                                 </div>
                             </header>
-                            
+
                             <div class="home-settings">
-                            
+
                                 <div class="recommended-settings">
                                     <h3>Personalize your device</h3>
                                     <div class="wallpapers">
-                                        
+
                                         <div class="wallpaper-svg"><img src="../../images/windows/wallpapers/W11-light.webp" alt="Wallpaper 1"></div>
                                         <div class="wallpaper-svg"><img src="../../images/windows/wallpapers/flowers.webp" alt="Wallpaper 2"></div>
                                         <div class="wallpaper-svg"><img src="../../images/windows/wallpapers/W11-dark.webp" alt="Wallpaper 3"></div>
                                         <div class="wallpaper-svg"><img src="../../images/windows/wallpapers/landpsace.webp" alt="Wallpaper 4"></div>
                                         <div class="wallpaper-svg" ><img src="../../images/windows/wallpapers/cosmic.webp" alt="Wallpaper 5"></div>
-                                        <div class="wallpaper-svg"><img  src="../../images/windows/wallpapers/W11-light.webp" alt="Wallpaper </div>
+                                        <div class="wallpaper-svg"><img  src="../../images/windows/wallpapers/W11-light.webp" alt="Wallpaper 6"></div>
                                     </div>
-                            
+
                                     <div class="setting">
                                         <div class="setting-info">
                                             <span class="nova">&#xE988;</span>
                                             <h4>Color mode</h4>
                                         </div>
-                            
+
                                         <div class="custom-select">
                                             <select>
                                                 <option value="light">Light</option>
@@ -397,13 +401,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            
+
                                 <div class="recommended-settings">
                                     <h3>Recommended settings</h3>
                                     <p>Recent and commonly used settings</p>
                                     <div class="setting">
                                         <div class="setting-info arrow">
-                                            <span class="nova">&#xE8</span>
+                                            <span class="nova">&#xE869;</span>
                                             <h4>Display</h4>
                                         </div>
                                     </div>
@@ -420,16 +424,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            
-                            
+
+
                                 <div class="recommended-settings">
-                                    <span class="nova">&#xE8</span>
+                                    <span class="nova">&#xE862;</span>
                                     <h3>Cloud storage</h3>
                                     <p>Make sure OneDrive is up and running on your PC so you can see your storage details.</p>
                                     <button class="onedrive-button">Open storage</button>
                                 </div>
-                            
-                            </div>  
+
+                            </div>
                         </main>
                     </section>
                 </section>
@@ -444,28 +448,28 @@
                                 <span style="font-size: .9rem;">Home</span>
                                 <span class="nova close-icon">&#xE451;</span>
                             </div>
-            
+
                             <div class="title-bar-center">
                                 <span>+</span>
                             </div>
                         </div>
-                        
+
                         <div class="title-bar--right">
                             <button><span class="nova">&#xE450;</span></button>
                             <button><span class="nova">&#xE452;</span></button>
                             <button class="close"><span class="nova">&#xE451;</span></button>
                         </div>
                     </section>
-            
+
                     <section class="fe-header fe-topmenu">
                         <div class="button-container">
-                            <button><span class="nova">&#xE;</span></button>
-                            
-                            <button><span class="nova">&#xE;</span></button>
-                    
-                            <button><span class="nova">&#xE;</span></button>
+                            <button><span class="nova">&#xE610;</span></button>
 
-                            <button><span class="nova invert">&#xE55/span></button>
+                            <button><span class="nova">&#xE611;</span></button>
+
+                            <button><span class="nova">&#xE612;</span></button>
+
+                            <button><span class="nova invert">&#xE556;</span></button>
                         </div>
 
 
@@ -483,62 +487,62 @@
                             <input type="text" placeholder="Search">
                         </div>
                     </section>
-            
+
                     <section class="fe-header">
                         <div class="button-container fe-topmenu-buttons">
-            
+
                             <button class="divider">
-                                <span class="nova">&#xE;</span>
-                                <span>New <span class="nova">&#xE01/span></span>
+                                <span class="nova">&#xE613;</span>
+                                <span>New <span class="nova">&#xE016;</span></span>
                             </button>
-            
+
                             <button disabled>
-                                <span class="nova">&#xE;</span>
+                                <span class="nova">&#xE602;</span>
                             </button>
-                            
+
                             <button>
-                                <span class="nova">&#xE;</span>
+                                <span class="nova">&#xE655;</span>
                             </button disabled>
-                    
+
                             <button>
-                                <span class="nova">&#xE;</span>
+                                <span class="nova">&#xE609;</span>
                             </button>
-            
+
                             <button disabled>
-                                <span class="nova">&#xE;</span>
+                                <span class="nova">&#xE603;</span>
                             </button>
-            
+
                             <button disabled>
-                                <span class="nova">&#xE;</span>
+                                <span class="nova">&#xE605;</span>
                             </button>
-            
+
                             <button disabled class="divider">
-                                <span class="nova">&#xE;</span>
+                                <span class="nova">&#xE601;</span>
                             </button>
-            
+
                             <button disabled>
-                                <span class="nova">&#xE/span>
-                                <span>Sort <span class="nova">&#xE01/span></span>
+                                <span class="nova">&#xE606;</span>
+                                <span>Sort <span class="nova">&#xE016;</span></span>
                             </button>
-            
+
                             <button>
-                                <span class="nova">&#xE;</span>
-                                <span>View <span class="nova">&#xE01/span></span>
+                                <span class="nova">&#xE607;</span>
+                                <span>View <span class="nova">&#xE016;</span></span>
                             </button>
-            
+
                             <button class="divider">
-                                <span class="nova">&#xE;</span>
-                                <span>Filter <span class="nova">&#xE01/span></span>
+                                <span class="nova">&#xE698;</span>
+                                <span>Filter <span class="nova">&#xE016;</span></span>
                             </button>
-            
+
                             <button>
-                                <span class="nova">&#xE</span>
+                                <span class="nova">&#xE779;</span>
                                 <span>Details</span>
                             </button>
                         </div>
                     </section>
-            
-            
+
+
                     <section class="fe-main">
                         <nav class="fe-main-nav" id="click">
                             <ul>
@@ -558,7 +562,7 @@
                                 <li><span class="nova">&#xE911;</span>Network</li>
                             </ul>
                         </nav>
-            
+
                         <div class="fe-main-content">
                             <table class="fe-main-table">
                                 <thead>
@@ -576,7 +580,7 @@
                                 </tbody>
 
                             </table>
-                        </div>  
+                        </div>
                     </section>
                 </section>
 
@@ -585,7 +589,7 @@
                     <section class="title-bar">
                         <div class="title-bar--left">
                             <span class="nova title-bar--icon">&#xE000;</span>
-                            <span class="title-text">Chrome</span>    
+                            <span class="title-text">Chrome</span>
                         </div>
                         <div class="title-bar--right">
                             <button><span class="nova">&#xE450;</span></button>
@@ -593,9 +597,9 @@
                             <button class="close"><span class="nova">&#xE451;</span></button>
                         </div>
                     </section>
-                    
+
                     <section class="settings-main" id="g_chrome">
-                        <iframe src="https://www.google.com/webhp?igu=1" sandbox="allow-scripts allow-same-origin" allowfullscreen="yes" loading="lazy"></iframe>
+                        <iframe style="width:100%; height: 100%" src="https://www.google.com/webhp?igu=1" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-orientation-lock allow-orientation-lock allow-downloads allow-top-navigation-by-user-activation" loading="lazy" allowfullscreen="yes" loading="lazy"></iframe>
                     </section>
                 </section>
             </div>
@@ -607,24 +611,24 @@
 
 
     <footer class="taskbar" id="footer">
-		<div id="weather-main" class="weather-info">
+                <div id="weather-main" class="weather-info">
            <span id="taskbar-icon" class="nova">&#xE008;</span>
-		  <div class="taskbar-objects">
-			<span id="taskbar-objects--temperature" class="temperature">Error</span>
-			<span id="taskbar-objects--description" class="description" >404</span>
-		  </div>
-		</div>
-	  
+                  <div class="taskbar-objects">
+                        <span id="taskbar-objects--temperature" class="temperature">Error</span>
+                        <span id="taskbar-objects--description" class="description" >404</span>
+                  </div>
+                </div>
+
         <div class="weather-card" id="weather-bg">
             <div class="temperatures-card">
-                <span id="weather_icon" class="nova">&#xE8</span>
+                <span id="weather_icon" class="nova">&#xE86C;</span>
                 <span id="temperature-card" class="temperature-card">Error</span>
                 <div class="weather-info-card">
                     <span id="status-weather" class="weather-status">404</span>
                     <span id="feels_Like" class="sensacion">Not Found</span>
                 </div>
             </div>
-            
+
             <article class="advanced-weather-info">
                 <section class="weather-items">
                     <h2 class="weather-item" data-description="Wind speed at which the air moves, measured in kilometers per hour (km/h).">Wind</h2>
@@ -646,19 +650,19 @@
                     <h2 class="weather-item" data-description="Degree of cloudiness in the atmosphere represented as a percentage.">Cloudiness</h2>
                     <span class="weather-text" id="cloudiness">R</span>
                 </section>
-                
+
             </article>
-    
+
         </div>
 
-		<div class="taskbar-items">
-			<ul class="icon-list">
+                <div class="taskbar-items">
+                        <ul class="icon-list">
                 <li class="icon-list--icon" id="fe-Icon">
-                    <span class="nova icon-list--icon">&#xE8</span>
+                    <span class="nova icon-list--icon">&#xE875;</span>
                 </li>
 
                 <li class="icon-list--icon" id="menu-windows-Icon">
-                    <span class="nova icon-list--icon">&#xE8</span>
+                    <span class="nova icon-list--icon">&#xE873;</span>
 
                     <div class="menu-windows anima-slideup" id="menu-windows">
                         <div class="menu-windows--search">
@@ -666,17 +670,17 @@
                                 <input class="input-windows" type="text" placeholder="Search for apps, settings and documents">
                             </div>
                         </div>
-                    
+
                         <div class="menu-wrapper">
                             <div class="menu-windows--pins-texts">
                                 <span class="no-icon">Pinned</span>
                                 <button class="menu-windows--button">All apps <span class="nova menu-windows-button--button">&#xE018;</span></button>
                             </div>
-                            
-                    
+
+
                             <div class="top">
                                 <div class="menu-windows--icon-grid">
-                                    <div class="menu-windows--icon" nonce="nonce-csp" onclick="Recorder()" >
+                                    <div class="menu-windows--icon" onclick="Recorder()" >
                                         <span class="nova">&#xE005;</span>
                                         <span class="menu-windows--icon-title">Screen Recorder</span>
                                     </div>
@@ -684,65 +688,65 @@
                                         <span class="nova">&#xE330;</span>
                                         <span class="menu-windows--icon-title">Calculator</span>
                                     </div>
-                                
+
                                     <div class="menu-windows--icon" id="Icon-Settings">
-                                        <span class="nova">&#xE8</span>
+                                        <span class="nova">&#xE872;</span>
                                         <span class="menu-windows--icon-title">Settings</span>
                                     </div>
                             </div>
-                       
+
                         </div>
 
                             <div class="top">
                                 <div class="menu-windows--pins-texts">
                                     <span class="no-icon">Recommended</span>
                                 </div>
-                            
+
                                 <div class="menu-windows--icon-grid">
-                                    <div class="menu-windows--icon" id="TopSecret" nonce="nonce-csp" onclick="alert('IN DEVELOPMENT');">
+                                    <div class="menu-windows--icon" id="TopSecret" onclick="alert('IN DEVELOPMENT');">
                                         <span class="nova">&#xE435;</span>
                                         <span class="menu-windows--icon-title">Top Secret</span>
                                     </div>
                                     <div class="menu-windows--icon" id="FE2">
-                                        <span class="nova">&#xE8</span>
+                                        <span class="nova">&#xE875;</span>
                                         <span class="menu-windows--icon-title">File Explorer</span>
                                     </div>
                                 </div>
                             </div>
-                        
-                    
-                    
+
+
+
                         </div>
                             <div class="user-settings">
                                 <div class="user">
-                                    <span class="nova">&#xEspan>
+                                    <span class="nova">&#xE716;</span>
                                     <span>Alejandro</span>
                                 </div>
                                 <span class="nova">&#xE904;</span>
                             </div>
-                    
-                    
+
+
                     </div>
                 </li>
 
                 <li class="icon-list--icon" id="settings-Icon">
-                    <span class="nova icon-list--icon">&#xE8</span>
+                    <span class="nova icon-list--icon">&#xE872;</span>
                 </li>
             </ul>
 
-		</div>
-        
-		<div class="system-tray-icons"> 
-			<div class="icon-list">
+                </div>
+
+                <div class="system-tray-icons">
+                        <div class="icon-list">
                 <span class="nova invert system-tray-icons---icon">&#xE098;</span>
-                <span class="nova system-tray-icons---icon">&#xE8</span>
+                <span class="nova system-tray-icons---icon">&#xE871;</span>
                 <span class="nova invert system-tray-icons---icon">&#xE094;</span>
-                <span class="nova invert system-tray-icons---icon">&#xE8pan>
+                <span class="nova invert system-tray-icons---icon">&#xE876;</span>
                 <div class="hover-right">
-                    <div class="taskbar-objects" id="time"> 
+                    <div class="taskbar-objects" id="time">
                         <span class="date" id="clock">15:11</span>
                         <span class="date" id="date">13/02/2024</span>
-				    </div>
+                                    </div>
                     <div class="icon-list" id="bell" data-description="No new notifications">
                         <span class="nova invert system-tray-icons---icon">&#xE339;</span>
                     </div>
@@ -750,17 +754,17 @@
                     <section class="calendar anima-slideup anima-slideup" id="calendar">
                         <div class="calendar-header flex-center-spacebetween calendar-header-top">
                             <span id="calendar-date-long">Wednesday, April 10</span>
-                            <button class="toggleCalendar" id="toggleCalendar"><span class="nova calendar-img">&#xE01/span></button>
+                            <button class="toggleCalendar" id="toggleCalendar"><span class="nova calendar-img">&#xE017;</span></button>
                         </div>
-                
+
                         <div class="calendar-header flex-center-spacebetween">
                             <span id="currentMonthYear" class="calendar-date-short">April 2024</span>
                             <div>
-                                <button id="prevMonth" class="calendar-button changeMonth"><span class="calendar-img nova">&#xE01/span></button>
-                                <button id="nextMonth" class="calendar-button changeMonth"><span class="calendar-img nova">&#xE01/span></button>
+                                <button id="prevMonth" class="calendar-button changeMonth"><span class="calendar-img nova">&#xE016;</span></button>
+                                <button id="nextMonth" class="calendar-button changeMonth"><span class="calendar-img nova">&#xE017;</span></button>
                             </div>
                         </div>
-                
+
                         <ol class="weekdays-list calendar-grid">
                             <li>Mo</li>
                             <li>Tu</li>
@@ -770,14 +774,14 @@
                             <li>Sa</li>
                             <li>Su</li>
                         </ol>
-                
+
                         <ol class="days calendar-grid" id="calendarDays"></ol>
                     </section>
 
                 </div>
                 <div data-description="Show desktop" class="text-hover empty"></div>
-			</div>
-		</div>
+                        </div>
+                </div>
     </footer>
 
     <script src="./js/clock.js"></script>
